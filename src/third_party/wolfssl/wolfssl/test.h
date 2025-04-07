@@ -1012,14 +1012,14 @@ static const char* client_showpeer_msg[][9] = {
 #ifndef NO_MULTIBYTE_PRINT
     /* Japanese */
     {
-        "SSL ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã¯",
-        "SSL æš—å·ã‚¹ã‚¤ãƒ¼ãƒˆã¯",
+        "SSL ã??ã?¼ã?¸ã?§ã?³ã?¯",
+        "SSL æ??å?·ã?¹ã?¤ã?¼ã??ã?¯",
         "SSL signature algorithm is",
-        "SSL æ›²ç·šåã¯",
-        "SSL DH ã‚µã‚¤ã‚ºã¯",
-        "SSL å†åˆ©ç”¨ã‚»ãƒƒã‚·ãƒ§ãƒ³",
-        "ä»£æ›¿è¨¼æ˜Žãƒã‚§ãƒ¼ãƒ³ã‚’ä½¿ç”¨",
-        "ç›¸æ‰‹æ–¹è¨¼æ˜Žæ›¸æƒ…å ±",
+        "SSL æ?²ç·?å??ã?¯",
+        "SSL DH ã?µã?¤ã?ºã?¯",
+        "SSL å??å?©ç?¨ã?»ã??ã?·ã?§ã?³",
+        "ä»£æ?¿è¨¼æ??ã??ã?§ã?¼ã?³ã??ä½¿ç?¨",
+        "ç?¸æ??æ?¹è¨¼æ??æ?¸æ??å ±",
         NULL
     },
 #endif
@@ -1038,10 +1038,10 @@ static const char* client_showx509_msg[][5] = {
 #ifndef NO_MULTIBYTE_PRINT
     /* Japanese */
     {
-        "ç™ºè¡Œè€…",
-        "ã‚µãƒ–ã‚¸ã‚§ã‚¯ãƒˆ",
-        "ä»£æ›¿å",
-        "ã‚·ãƒªã‚¢ãƒ«ç•ªå·",
+        "ç?ºè¡?è??",
+        "ã?µã??ã?¸ã?§ã?¯ã??",
+        "ä»£æ?¿å??",
+        "ã?·ã?ªã?¢ã?«ç?ªå?·",
         NULL
     },
 #endif

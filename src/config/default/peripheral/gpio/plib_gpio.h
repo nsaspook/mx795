@@ -62,66 +62,6 @@
 // *****************************************************************************
 
 
-/*** Macros for SW1 pin ***/
-#define SW1_Set()               (LATDSET = (1<<8))
-#define SW1_Clear()             (LATDCLR = (1<<8))
-#define SW1_Toggle()            (LATDINV= (1<<8))
-#define SW1_OutputEnable()      (TRISDCLR = (1<<8))
-#define SW1_InputEnable()       (TRISDSET = (1<<8))
-#define SW1_Get()               ((PORTD >> 8) & 0x1)
-#define SW1_GetLatch()          ((LATD >> 8) & 0x1)
-#define SW1_PIN                  GPIO_PIN_RD8
-
-/*** Macros for D4 pin ***/
-#define D4_Set()               (LATDSET = (1<<0))
-#define D4_Clear()             (LATDCLR = (1<<0))
-#define D4_Toggle()            (LATDINV= (1<<0))
-#define D4_OutputEnable()      (TRISDCLR = (1<<0))
-#define D4_InputEnable()       (TRISDSET = (1<<0))
-#define D4_Get()               ((PORTD >> 0) & 0x1)
-#define D4_GetLatch()          ((LATD >> 0) & 0x1)
-#define D4_PIN                  GPIO_PIN_RD0
-
-/*** Macros for D5 pin ***/
-#define D5_Set()               (LATDSET = (1<<1))
-#define D5_Clear()             (LATDCLR = (1<<1))
-#define D5_Toggle()            (LATDINV= (1<<1))
-#define D5_OutputEnable()      (TRISDCLR = (1<<1))
-#define D5_InputEnable()       (TRISDSET = (1<<1))
-#define D5_Get()               ((PORTD >> 1) & 0x1)
-#define D5_GetLatch()          ((LATD >> 1) & 0x1)
-#define D5_PIN                  GPIO_PIN_RD1
-
-/*** Macros for D6 pin ***/
-#define D6_Set()               (LATDSET = (1<<2))
-#define D6_Clear()             (LATDCLR = (1<<2))
-#define D6_Toggle()            (LATDINV= (1<<2))
-#define D6_OutputEnable()      (TRISDCLR = (1<<2))
-#define D6_InputEnable()       (TRISDSET = (1<<2))
-#define D6_Get()               ((PORTD >> 2) & 0x1)
-#define D6_GetLatch()          ((LATD >> 2) & 0x1)
-#define D6_PIN                  GPIO_PIN_RD2
-
-/*** Macros for SW3 pin ***/
-#define SW3_Set()               (LATDSET = (1<<13))
-#define SW3_Clear()             (LATDCLR = (1<<13))
-#define SW3_Toggle()            (LATDINV= (1<<13))
-#define SW3_OutputEnable()      (TRISDCLR = (1<<13))
-#define SW3_InputEnable()       (TRISDSET = (1<<13))
-#define SW3_Get()               ((PORTD >> 13) & 0x1)
-#define SW3_GetLatch()          ((LATD >> 13) & 0x1)
-#define SW3_PIN                  GPIO_PIN_RD13
-
-/*** Macros for SW2 pin ***/
-#define SW2_Set()               (LATDSET = (1<<7))
-#define SW2_Clear()             (LATDCLR = (1<<7))
-#define SW2_Toggle()            (LATDINV= (1<<7))
-#define SW2_OutputEnable()      (TRISDCLR = (1<<7))
-#define SW2_InputEnable()       (TRISDSET = (1<<7))
-#define SW2_Get()               ((PORTD >> 7) & 0x1)
-#define SW2_GetLatch()          ((LATD >> 7) & 0x1)
-#define SW2_PIN                  GPIO_PIN_RD7
-
 
 // *****************************************************************************
 /* GPIO Port

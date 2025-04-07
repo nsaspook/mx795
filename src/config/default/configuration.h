@@ -110,6 +110,35 @@ extern "C" {
 #define SYS_CMD_RTOS_STACK_SIZE                256
 #define SYS_CMD_RTOS_TASK_PRIORITY             1
 
+
+/* File System Service Configuration */
+
+#define SYS_FS_MEDIA_NUMBER               (1U)
+#define SYS_FS_VOLUME_NUMBER              (1U)
+
+#define SYS_FS_AUTOMOUNT_ENABLE           false
+#define SYS_FS_MAX_FILES                  (1U)
+#define SYS_FS_MAX_FILE_SYSTEM_TYPE       (1U)
+#define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512U)
+#define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  (2048U)
+#define SYS_FS_USE_LFN                    (1)
+#define SYS_FS_FILE_NAME_LEN              (255U)
+#define SYS_FS_CWD_STRING_LEN             (1024)
+
+/* File System RTOS Configurations*/
+#define SYS_FS_STACK_SIZE                 1024
+#define SYS_FS_PRIORITY                   1
+
+#define SYS_FS_FAT_VERSION                "v0.15"
+#define SYS_FS_FAT_READONLY               false
+#define SYS_FS_FAT_CODE_PAGE              437
+#define SYS_FS_FAT_MAX_SS                 SYS_FS_MEDIA_MAX_BLOCK_SIZE
+
+
+
+
+
+
 #define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			(1U)
 #define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(1U)
 #define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		(1U)
@@ -124,6 +153,21 @@ extern "C" {
 // Section: Driver Configuration
 // *****************************************************************************
 // *****************************************************************************
+/* Memory Driver Global Configuration Options */
+#define DRV_MEMORY_INSTANCES_NUMBER          (1U)
+
+/* Memory Driver Instance 0 Configuration */
+#define DRV_MEMORY_INDEX_0                   0
+#define DRV_MEMORY_CLIENTS_NUMBER_IDX0       1
+#define DRV_MEMORY_DEVICE_START_ADDRESS      0xA0000000U
+#define DRV_MEMORY_DEVICE_MEDIA_SIZE         96UL
+#define DRV_MEMORY_DEVICE_MEDIA_SIZE_BYTES   (DRV_MEMORY_DEVICE_MEDIA_SIZE * 1024U)
+#define DRV_MEMORY_DEVICE_PROGRAM_SIZE       512U
+/* Memory Driver Instance 0 RTOS Configurations*/
+#define DRV_MEMORY_STACK_SIZE_IDX0               1024
+#define DRV_MEMORY_PRIORITY_IDX0                 1
+#define DRV_MEMORY_RTOS_DELAY_IDX0               10U
+
 /*** MIIM Driver Configuration ***/
 #define DRV_MIIM_ETH_MODULE_ID_0                _ETH_BASE_ADDRESS
 #define DRV_MIIM_DRIVER_INDEX_0                 0
@@ -131,7 +175,7 @@ extern "C" {
 #define DRV_MIIM_INSTANCE_OPERATIONS        4
 #define DRV_MIIM_INSTANCE_CLIENTS           2
 #define DRV_MIIM_CLIENT_OP_PROTECTION   false
-#define DRV_MIIM_COMMANDS   true
+#define DRV_MIIM_COMMANDS   false
 #define DRV_MIIM_DRIVER_OBJECT              DRV_MIIM_OBJECT_BASE_Default            
 
 /* MIIM RTOS Configurations*/
@@ -146,6 +190,38 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
+
+
+/*** DNS Client Configuration ***/
+#define TCPIP_STACK_USE_DNS
+#define TCPIP_DNS_CLIENT_SERVER_TMO					60
+#define TCPIP_DNS_CLIENT_TASK_PROCESS_RATE			200
+#define TCPIP_DNS_CLIENT_CACHE_ENTRIES				5
+#define TCPIP_DNS_CLIENT_CACHE_ENTRY_TMO			0
+#define TCPIP_DNS_CLIENT_CACHE_PER_IPV4_ADDRESS		5
+#define TCPIP_DNS_CLIENT_CACHE_PER_IPV6_ADDRESS		1
+#define TCPIP_DNS_CLIENT_ADDRESS_TYPE			    IP_ADDRESS_TYPE_IPV4
+#define TCPIP_DNS_CLIENT_CACHE_DEFAULT_TTL_VAL		1200
+#define TCPIP_DNS_CLIENT_LOOKUP_RETRY_TMO			2
+#define TCPIP_DNS_CLIENT_MAX_HOSTNAME_LEN			64
+#define TCPIP_DNS_CLIENT_MAX_SELECT_INTERFACES		4
+#define TCPIP_DNS_CLIENT_DELETE_OLD_ENTRIES			true
+#define TCPIP_DNS_CLIENT_CONSOLE_CMD               	true
+#define TCPIP_DNS_CLIENT_USER_NOTIFICATION   false
+
+
+
+/*** ICMPv4 Server Configuration ***/
+#define TCPIP_STACK_USE_ICMP_SERVER
+#define TCPIP_ICMP_ECHO_ALLOW_BROADCASTS    false
+
+/*** ICMPv4 Client Configuration ***/
+#define TCPIP_STACK_USE_ICMP_CLIENT
+#define TCPIP_ICMP_ECHO_REQUEST_TIMEOUT        500
+#define TCPIP_ICMP_TASK_TICK_RATE              33
+#define TCPIP_STACK_MAX_CLIENT_ECHO_REQUESTS   4
+#define TCPIP_ICMP_COMMAND_ENABLE              false
+
 /* Number of Endpoints used */
 #define DRV_USBFS_ENDPOINTS_NUMBER                        4U
 
@@ -158,6 +234,28 @@ extern "C" {
 /* EP0 size in bytes */
 #define USB_DEVICE_EP0_BUFFER_SIZE                          64U
 
+
+/******************************************************************************/
+/*wolfSSL TLS Layer Configuration*/
+/******************************************************************************/
+
+#define WOLFSSL_ALT_NAMES
+#define WOLFSSL_DER_LOAD
+#define KEEP_OUR_CERT
+#define KEEP_PEER_CERT
+#define HAVE_CRL_IO
+#define HAVE_IO_TIMEOUT
+#define TFM_NO_ASM
+#define WOLFSSL_NO_ASM
+#define SIZEOF_LONG_LONG 8
+#define WOLFSSL_USER_IO
+#define NO_WRITEV
+#define MICROCHIP_TCPIP
+#define WOLFSSL_DTLS
+#define NO_PWDBASED
+#define NO_ERROR_STRINGS
+#define WOLFSSL_MAX_ERROR_SZ 38 // Fix Mandatory Misra 21.18 caused by removing error strings with defining NO_ERROR_STRINGS
+#define NO_OLD_TLS
 
 /*** TCPIP MAC Configuration ***/
 #define TCPIP_EMAC_TX_DESCRIPTORS				    8
@@ -201,50 +299,64 @@ extern "C" {
 #define TCPIP_EMAC_FLOW_CONTROL_EMPTY_WMARK         0
 
 
-/******************************************************************************/
-/*wolfSSL TLS Layer Configuration*/
-/******************************************************************************/
 
-#define WOLFSSL_ALT_NAMES
-#define WOLFSSL_DER_LOAD
-#define KEEP_OUR_CERT
-#define KEEP_PEER_CERT
-#define HAVE_CRL_IO
-#define HAVE_IO_TIMEOUT
-#define TFM_NO_ASM
-#define WOLFSSL_NO_ASM
-#define SIZEOF_LONG_LONG 8
-#define WOLFSSL_USER_IO
-#define NO_WRITEV
-#define MICROCHIP_TCPIP
-#include "osal/osal.h"
-#define XMALLOC_OVERRIDE
-#define XMALLOC(s, h, type)  OSAL_Malloc((s))
-#define XFREE(p, h, type)    OSAL_Free((p))
-#define WOLFSSL_DTLS
-#define NO_PWDBASED
-#define HAVE_TLS_EXTENSIONS
-#define WOLFSSL_TLS13
-#define HAVE_SUPPORTED_CURVES
-#define HAVE_SNI
-#define HAVE_ALPN
-#define USE_WOLF_STRTOK
-#define NO_ERROR_STRINGS
-#define WOLFSSL_MAX_ERROR_SZ 38 // Fix Mandatory Misra 21.18 caused by removing error strings with defining NO_ERROR_STRINGS
-#define NO_OLD_TLS
-
-/* Maximum instances of CDC function driver */
-#define USB_DEVICE_CDC_INSTANCES_NUMBER                     1U
+/*** TCP Configuration ***/
+#define TCPIP_TCP_MAX_SEG_SIZE_TX		        	1460
+#define TCPIP_TCP_SOCKET_DEFAULT_TX_SIZE			512
+#define TCPIP_TCP_SOCKET_DEFAULT_RX_SIZE			512
+#define TCPIP_TCP_DYNAMIC_OPTIONS             			true
+#define TCPIP_TCP_START_TIMEOUT_VAL		        	1000
+#define TCPIP_TCP_DELAYED_ACK_TIMEOUT		    		100
+#define TCPIP_TCP_FIN_WAIT_2_TIMEOUT		    		5000
+#define TCPIP_TCP_KEEP_ALIVE_TIMEOUT		    		10000
+#define TCPIP_TCP_CLOSE_WAIT_TIMEOUT		    		0
+#define TCPIP_TCP_MAX_RETRIES		            		5
+#define TCPIP_TCP_MAX_UNACKED_KEEP_ALIVES			6
+#define TCPIP_TCP_MAX_SYN_RETRIES		        	3
+#define TCPIP_TCP_AUTO_TRANSMIT_TIMEOUT_VAL			40
+#define TCPIP_TCP_WINDOW_UPDATE_TIMEOUT_VAL			200
+#define TCPIP_TCP_MAX_SOCKETS		                10
+#define TCPIP_TCP_TASK_TICK_RATE		        	5
+#define TCPIP_TCP_MSL_TIMEOUT		        	    0
+#define TCPIP_TCP_QUIET_TIME		        	    0
+#define TCPIP_TCP_COMMANDS   false
+#define TCPIP_TCP_EXTERN_PACKET_PROCESS   false
+#define TCPIP_TCP_DISABLE_CRYPTO_USAGE		        	    false
 
 
-/* CDC Transfer Queue Size for both read and
-   write. Applicable to all instances of the
-   function driver */
-#define USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED                 3U
+
+/*** DHCP Configuration ***/
+#define TCPIP_STACK_USE_DHCP_CLIENT
+#define TCPIP_DHCP_TIMEOUT                          10
+#define TCPIP_DHCP_TASK_TICK_RATE                   5
+#define TCPIP_DHCP_HOST_NAME_SIZE                   20
+#define TCPIP_DHCP_CLIENT_CONNECT_PORT              68
+#define TCPIP_DHCP_SERVER_LISTEN_PORT               67
+#define TCPIP_DHCP_CLIENT_CONSOLE_CMD               true
+
+#define TCPIP_DHCP_USE_OPTION_TIME_SERVER           0
+#define TCPIP_DHCP_TIME_SERVER_ADDRESSES            0
+#define TCPIP_DHCP_USE_OPTION_NTP_SERVER            0
+#define TCPIP_DHCP_NTP_SERVER_ADDRESSES             0
+#define TCPIP_DHCP_ARP_LEASE_CHECK_TMO              1000
+#define TCPIP_DHCP_WAIT_ARP_FAIL_CHECK_TMO          10
 
 
-	/*** tcpip_cmd Configuration ***/
-	#define TCPIP_STACK_COMMAND_ENABLE
+
+/*** ARP Configuration ***/
+#define TCPIP_ARP_CACHE_ENTRIES                 		5
+#define TCPIP_ARP_CACHE_DELETE_OLD		        	true
+#define TCPIP_ARP_CACHE_SOLVED_ENTRY_TMO			1200
+#define TCPIP_ARP_CACHE_PENDING_ENTRY_TMO			60
+#define TCPIP_ARP_CACHE_PENDING_RETRY_TMO			2
+#define TCPIP_ARP_CACHE_PERMANENT_QUOTA		    		50
+#define TCPIP_ARP_CACHE_PURGE_THRESHOLD		    		75
+#define TCPIP_ARP_CACHE_PURGE_QUANTA		    		1
+#define TCPIP_ARP_CACHE_ENTRY_RETRIES		    		3
+#define TCPIP_ARP_GRATUITOUS_PROBE_COUNT			1
+#define TCPIP_ARP_TASK_PROCESS_RATE		        	2000
+#define TCPIP_ARP_PRIMARY_CACHE_ONLY		        	true
+#define TCPIP_ARP_COMMANDS true
 
 
 
@@ -270,6 +382,20 @@ extern "C" {
 
 
 
+	/*** tcpip_cmd Configuration ***/
+	#define TCPIP_STACK_COMMAND_ENABLE
+
+
+/* Maximum instances of CDC function driver */
+#define USB_DEVICE_CDC_INSTANCES_NUMBER                     1U
+
+
+/* CDC Transfer Queue Size for both read and
+   write. Applicable to all instances of the
+   function driver */
+#define USB_DEVICE_CDC_QUEUE_DEPTH_COMBINED                 3U
+
+
 /*** telnet Configuration ***/
 #define TCPIP_STACK_USE_TELNET_SERVER
 #define TCPIP_TELNET_MAX_CONNECTIONS    2
@@ -285,6 +411,60 @@ extern "C" {
 
 #define TCPIP_TELNET_OBSOLETE_AUTHENTICATION false
 #define TCPIP_TELNET_AUTHENTICATION_CONN_INFO true
+
+
+
+/*** DHCP Server v2 Configuration ***/
+#define TCPIP_STACK_USE_DHCP_SERVER_V2
+#define TCPIP_DHCPS_MAX_LEASES              32
+#define TCPIP_DHCPS_ICMP_PROBES             1
+#define TCPIP_DHCPS_CONFLICT_ATTEMPTS       1
+#define TCPIP_DHCPS_TASK_PROCESS_RATE       200
+#define TCPIP_DHCPS_CLIENT_ID_MAX_SIZE      16
+#define TCPIP_DHCPS_ICMP_ECHO_DATA_SIZE     16
+#define TCPIP_DHCPS_ICMP_ECHO_RETRIES       2
+#define TCPIP_DHCPS_INTERFACE_COUNT    		1
+
+#define TCPIP_DHCPS_OPTION_ROUTER_VALUES        1
+#define TCPIP_DHCPS_OPTION_DNS_VALUES           2
+#define TCPIP_DHCPS_OPTION_TIME_SERVER_VALUES   1
+#define TCPIP_DHCPS_OPTION_NAME_SERVER_VALUES   1
+#define TCPIP_DHCPS_OPTION_NTP_SERVER_VALUES    1
+#define TCPIP_DHCPS_OPTION_T1_T2_SUPPRESS       false
+
+#define TCPIP_DHCPS_MAX_EVENT_REGISTRATIONS     1
+#define TCPIP_DHCPS_REPORT_ERROR_EVENT          true
+#define TCPIP_DHCPS_REPORT_CLIENT_EVENT         true
+#define TCPIP_DHCPS_ENABLE_STATISTICS           false
+#define TCPIP_DHCPS_DYNAMIC_DB_ACCESS           false
+#define TCPIP_DHCPS_MULTI_THREADED_ACCESS       false
+
+#define TCPIP_DHCPS_INTERFACE_INDEX_IDX0        0
+#define TCPIP_DHCPS_MAX_LEASE_NUM_IDX0          32
+#define TCPIP_DHCPS_LEASEDURATION_DFLT_IDX0     28800
+#define TCPIP_DHCPS_SERVER_IP_ADDRESS_IDX0      "192.168.1.1"
+#define TCPIP_DHCPS_START_IP_ADDR_IDX0          "192.168.1.100"
+#define TCPIP_DHCPS_MASK_PREFIX_NUM_IDX0      	24
+#define TCPIP_DHCPS_ROUTER_IP_ADDR_IDX0         "192.168.1.1"
+#define TCPIP_DHCPS_DNS_IP_ADDR_IDX0            "192.168.1.1"
+#define TCPIP_DHCPS_TIMESERVER_IP_ADDR_IDX0     ""
+#define TCPIP_DHCPS_NAMESERVER_IP_ADDR_IDX0     ""
+#define TCPIP_DHCPS_NTPSERVER_IP_ADDR_IDX0      ""
+#define TCPIP_DHCPS_CONFIG_FLAG_IDX0            \
+                                                0
+        
+#define TCPIP_DHCPS_LEASEDURATION_MIN_IDX0      60
+#define TCPIP_DHCPS_LEASEDURATION_MAX_IDX0      0
+#define TCPIP_DHCPS_UNREQ_TMO_IDX0              0
+        
+#define TCPIP_DHCPS_T1RENEW_MULT_FACT_IDX0      1
+#define TCPIP_DHCPS_T1RENEW_DIV_FACT_IDX0       2
+#define TCPIP_DHCPS_T2REBIND_MULT_FACT_IDX0     7
+#define TCPIP_DHCPS_T2REBIND_DIV_FACT_IDX0      8
+        
+
+
+
 
 
 /*** USB Driver Configuration ***/
@@ -307,6 +487,24 @@ extern "C" {
 
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  CACHE_ALIGN
+
+
+/*** Berkeley API Configuration ***/
+#define TCPIP_STACK_USE_BERKELEY_API
+#define MAX_BSD_SOCKETS 					4
+#define TCPIP_STACK_USE_BERKELEY_API
+
+
+/*** IPv4 Configuration ***/
+#define TCPIP_IPV4_ARP_SLOTS                        10
+#define TCPIP_IPV4_EXTERN_PACKET_PROCESS   false
+
+#define TCPIP_IPV4_COMMANDS true
+
+#define TCPIP_IPV4_FORWARDING_ENABLE    false 
+
+
+
 
 
 /*** TCPIP Heap Configuration ***/
@@ -337,6 +535,9 @@ extern "C" {
 // *****************************************************************************
 // *****************************************************************************
 
+#define TCPIP_STACK_USE_IPV4
+#define TCPIP_STACK_USE_TCP
+#define TCPIP_STACK_USE_UDP
 
 #define TCPIP_STACK_TICK_RATE		        		5
 #define TCPIP_STACK_SECURE_PORT_ENTRIES             10
@@ -364,6 +565,27 @@ extern "C" {
 /* TCP/IP RTOS Configurations*/
 #define TCPIP_RTOS_STACK_SIZE                1024
 #define TCPIP_RTOS_PRIORITY             1
+
+
+
+/*** announce Configuration ***/
+#define TCPIP_STACK_USE_ANNOUNCE
+#define TCPIP_ANNOUNCE_MAX_PAYLOAD 	512
+#define TCPIP_ANNOUNCE_TASK_RATE    333
+#define TCPIP_ANNOUNCE_NETWORK_DIRECTED_BCAST             			false
+
+
+
+/*** UDP Configuration ***/
+#define TCPIP_UDP_MAX_SOCKETS		                	10
+#define TCPIP_UDP_SOCKET_DEFAULT_TX_SIZE		    	512
+#define TCPIP_UDP_SOCKET_DEFAULT_TX_QUEUE_LIMIT    	 	3
+#define TCPIP_UDP_SOCKET_DEFAULT_RX_QUEUE_LIMIT			3
+#define TCPIP_UDP_USE_POOL_BUFFERS   false
+#define TCPIP_UDP_USE_TX_CHECKSUM             			true
+#define TCPIP_UDP_USE_RX_CHECKSUM             			true
+#define TCPIP_UDP_COMMANDS   false
+#define TCPIP_UDP_EXTERN_PACKET_PROCESS   false
 
 
 
@@ -444,6 +666,55 @@ extern "C" {
 
 
 
+
+
+
+/*** HTTP Server Configuration ***/
+#define TCPIP_STACK_USE_HTTP_SERVER_V2
+#define TCPIP_HTTP_MAX_HEADER_LEN		    		15
+#define TCPIP_HTTP_CACHE_LEN		        		"600"
+#define TCPIP_HTTP_TIMEOUT		            		45
+#define TCPIP_HTTP_MAX_CONNECTIONS		    		4
+#define TCPIP_HTTP_DEFAULT_FILE		        		"index.htm"
+#define TCPIP_HTTP_FILENAME_MAX_LEN			        25
+#define TCPIP_HTTP_WEB_DIR		        		    "/mnt/mchpSite1/"
+#define TCPIP_HTTP_USE_POST
+#define TCPIP_HTTP_USE_COOKIES
+#define TCPIP_HTTP_USE_AUTHENTICATION
+#define TCPIP_HTTP_MAX_DATA_LEN		        		100
+#define TCPIP_HTTP_SKT_TX_BUFF_SIZE		    		1024
+#define TCPIP_HTTP_SKT_RX_BUFF_SIZE		    		1024
+#define TCPIP_HTTP_LISTEN_PORT		    		    80
+#define TCPIP_HTTP_CONFIG_FLAGS                       \
+                                                        TCPIP_HTTP_MODULE_FLAG_SECURE_DEFAULT |\
+                                                        TCPIP_HTTP_MODULE_FLAG_DEFAULT
+#define TCPIP_HTTP_TASK_RATE					    33
+#define TCPIP_HTTP_RESPONSE_BUFFER_SIZE				300
+#define TCPIP_HTTP_COOKIE_BUFFER_SIZE				200
+#define TCPIP_HTTP_FIND_PEEK_BUFF_SIZE				512
+#define TCPIP_HTTP_FILE_PROCESS_BUFFER_SIZE         512
+#define TCPIP_HTTP_FILE_PROCESS_BUFFERS_NUMBER      4
+#define TCPIP_HTTP_FILE_PROCESS_BUFFER_RETRIES      10
+#define TCPIP_HTTP_CHUNKS_NUMBER                    10
+#define TCPIP_HTTP_CHUNK_RETRIES                    10
+#define TCPIP_HTTP_MAX_RECURSE_LEVEL				3
+#define TCPIP_HTTP_DYNVAR_PROCESS           		1
+#define TCPIP_HTTP_DYNVAR_DESCRIPTORS_NUMBER		10
+#define TCPIP_HTTP_DYNVAR_MAX_LEN					50
+#define TCPIP_HTTP_DYNVAR_ARG_MAX_NUMBER			4
+#define TCPIP_HTTP_DYNVAR_PROCESS_RETRIES			10
+#define TCPIP_HTTP_SSI_PROCESS           			1
+#define TCPIP_HTTP_SSI_ATTRIBUTES_MAX_NUMBER        4
+#define TCPIP_HTTP_SSI_STATIC_ATTTRIB_NUMBER        2
+#define TCPIP_HTTP_SSI_CMD_MAX_LEN                  100
+#define TCPIP_HTTP_SSI_VARIABLES_NUMBER             13
+#define TCPIP_HTTP_SSI_VARIABLE_NAME_MAX_LENGTH     10
+#define TCPIP_HTTP_SSI_VARIABLE_STRING_MAX_LENGTH   10
+#define TCPIP_HTTP_SSI_ECHO_NOT_FOUND_MESSAGE       "SSI Echo - Not Found: "
+#define TCPIP_HTTP_CONNECTION_TIMEOUT          	0
+#define TCPIP_HTTP_MALLOC_FUNC                  malloc
+#define TCPIP_HTTP_FREE_FUNC                    free
+#define TCPIP_HTTP_CONSOLE_CMD           		false
 
 
 

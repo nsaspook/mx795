@@ -70,6 +70,7 @@
 // *****************************************************************************
 void CORE_TIMER_Handler (void);
 void UART_1_Handler (void);
+void ADC_Handler (void);
 void USB_1_Handler (void);
 void ETH_Handler (void);
 
@@ -89,6 +90,11 @@ void __attribute__((used)) CORE_TIMER_Handler (void)
 void __attribute__((used)) UART_1_Handler (void)
 {
     UART_1_InterruptHandler();
+}
+
+void __attribute__((used)) ADC_Handler (void)
+{
+    ADC_InterruptHandler();
 }
 
 void __attribute__((used)) USB_1_Handler (void)

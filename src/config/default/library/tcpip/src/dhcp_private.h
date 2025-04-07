@@ -93,8 +93,8 @@ Microchip or any third party.
                                                     // offer of configuration parameters.
 #define TCPIP_DHCP_ACK_MESSAGE                (5u)  // DHCP ACK Message: Server to client with configuration parameters, including committed
                                                     // network address.
-#define TCPIP_DHCP_NAK_MESSAGE                (6u)  // DHCP NAK Message: Server to client indicating client’s notion of network
-                                                    // address is incorrect (e.g., client has moved to new subnet) or client’s lease as expired
+#define TCPIP_DHCP_NAK_MESSAGE                (6u)  // DHCP NAK Message: Server to client indicating client?s notion of network
+                                                    // address is incorrect (e.g., client has moved to new subnet) or client?s lease as expired
 // Internal DHCP messages
 #define TCPIP_DHCP_UNKNOWN_MESSAGE            (0u)  // Code for unknown DHCP message
 #define TCPIP_DHCP_REQUEST_RENEW_MESSAGE      (9u)  // internal message for Request Renew message

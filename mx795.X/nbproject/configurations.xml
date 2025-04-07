@@ -6,13 +6,19 @@
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
         <logicalFolder name="default" displayName="default" projectFiles="true">
+          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
+            <itemPath>../src/config/default/bsp/bsp.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="crypto" displayName="crypto" projectFiles="true">
+            <itemPath>../src/config/default/crypto/crypto.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="driver" displayName="driver" projectFiles="true">
             <logicalFolder name="ethmac" displayName="ethmac" projectFiles="true">
               <logicalFolder name="src" displayName="src" projectFiles="true">
                 <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
-                  <itemPath>../src/config/default/driver/ethmac/src/dynamic/_eth_dcpt_lists.h</itemPath>
                   <itemPath>../src/config/default/driver/ethmac/src/dynamic/drv_eth_pic32_lib.h</itemPath>
                   <itemPath>../src/config/default/driver/ethmac/src/dynamic/drv_ethmac_lib.h</itemPath>
+                  <itemPath>../src/config/default/driver/ethmac/src/dynamic/_eth_dcpt_lists.h</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/default/driver/ethmac/src/drv_ethmac_local.h</itemPath>
               </logicalFolder>
@@ -28,6 +34,13 @@
               </logicalFolder>
               <itemPath>../src/config/default/driver/ethphy/drv_ethphy.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="memory" displayName="memory" projectFiles="true">
+              <itemPath>../src/config/default/driver/memory/drv_memory.h</itemPath>
+              <itemPath>../src/config/default/driver/memory/src/drv_memory_local.h</itemPath>
+              <itemPath>../src/config/default/driver/memory/src/drv_memory_file_system.h</itemPath>
+              <itemPath>../src/config/default/driver/memory/drv_memory_definitions.h</itemPath>
+              <itemPath>../src/config/default/driver/memory/drv_memory_ram.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="miim" displayName="miim" projectFiles="true">
               <logicalFolder name="src" displayName="src" projectFiles="true">
                 <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
@@ -41,127 +54,127 @@
               <logicalFolder name="usbfs" displayName="usbfs" projectFiles="true">
                 <logicalFolder name="src" displayName="src" projectFiles="true">
                   <logicalFolder name="templates" displayName="templates" projectFiles="true">
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_VbusCharge_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LiveSingleEndedZero_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_GEN_Interrupt_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ERR_InterruptStatus_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OpModeSelect_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EyePattern_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_BSessionEnd_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_BSessionEnd_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastTransactionDetails_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EP0NAKRetry_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ALL_Interrupt_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_InterruptStatus_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_UOEMonitor_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_FrameNumber_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_GEN_Interrupt_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_InterruptStatus_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastDirection_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LiveJState_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_DeviceAddress_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_HostBusyWithToken_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_VbusDischarge_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ERR_Interrupt_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LiveJState_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_Interrupt_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EP0LowSpeedConnect_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_IDPinState_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_VbusPowerOnOff_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_FrameNumber_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usbfs_registers.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnRxEnableEnhanced_PIC32.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_Suspend_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_SpeedControl_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnHandshake_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_VbusPowerOnOff_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastEndpoint_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_AutomaticSuspend_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ERR_Interrupt_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ActivityPending_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_ASessionValid_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_NextTokenSpeed_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_BDTFunctions_PIC32.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_PullUpPullDown_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_VbusDischarge_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_IDPinState_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ModuleBusy_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_StartOfFrames_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_SOFThreshold_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_NextTokenSpeed_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastEndpoint_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_SleepEntryGuard_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnControlTransfer_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_PacketTransfer_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EP0LowSpeedConnect_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnControlTransfer_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_TokenPID_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EP0NAKRetry_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_SessionValid_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OnChipPullup_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_StopInIdle_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_HostGeneratesReset_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ModulePower_32Bit16Bit.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_HostBusyWithToken_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_DeviceAddress_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnStall_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastDirection_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LiveSingleEndedZero_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastPingPong_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastTransactionDetails_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_BDTBaseAddress_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_StopInIdle_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_AutomaticSuspend_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_VbusCharge_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_ASessionValid_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_LineState_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnTxRx_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_SOFThreshold_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnStall_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_GEN_InterruptStatus_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_LineState_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ModulePower_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_PacketTransfer_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_BDTBaseAddress_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_PingPongMode_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_StartOfFrames_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_PullUpPullDown_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_TokenEP_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_Interrupt_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_TokenEP_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_GEN_InterruptStatus_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_HostGeneratesReset_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_TokenPID_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ERR_InterruptStatus_Default.h</itemPath>
                     <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnTxRx_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnRxEnableEnhanced_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ActivityPending_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastPingPong_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ResumeSignaling_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OpModeSelect_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_BufferFreeze_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_SessionValid_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_TokenEP_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_SOFThreshold_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LiveJState_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_NextTokenSpeed_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_VbusPowerOnOff_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ActivityPending_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_VbusDischarge_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_TokenPID_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_IDPinState_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_HostGeneratesReset_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_ASessionValid_Default.h</itemPath>
                     <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnHandshake_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_BufferFreeze_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OnChipTransceiver_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ResumeSignaling_Default.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_SleepEntryGuard_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnControlTransfer_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ActivityPending_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_SleepEntryGuard_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_GEN_Interrupt_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_StartOfFrames_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastEndpoint_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EyePattern_Default.h</itemPath>
                     <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_BDTFunctions_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ALL_Interrupt_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_GEN_Interrupt_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LiveSingleEndedZero_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_SessionValid_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ERR_Interrupt_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_PacketTransfer_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_PullUpPullDown_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_BDTFunctions_PIC32.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_AutomaticSuspend_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnRxEnableEnhanced_PIC32.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_GEN_InterruptStatus_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_PingPongMode_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_HostBusyWithToken_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_LineState_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EP0LowSpeedConnect_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_IDPinState_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_BSessionEnd_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_UOEMonitor_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_VbusPowerOnOff_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnStall_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_InterruptStatus_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnStall_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_LineState_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ALL_Interrupt_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastDirection_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EP0NAKRetry_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ResumeSignaling_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_PacketTransfer_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_DeviceAddress_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastTransactionDetails_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastDirection_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ERR_Interrupt_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ModulePower_32Bit16Bit.h</itemPath>
                     <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EyePattern_Unsupported.h</itemPath>
-                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ModuleBusy_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usbfs_registers.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastPingPong_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OpModeSelect_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LiveJState_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_TokenPID_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ALL_Interrupt_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_StopInIdle_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_TokenEP_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_BufferFreeze_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_StartOfFrames_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OpModeSelect_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_NextTokenSpeed_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_Interrupt_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_BufferFreeze_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_GEN_InterruptStatus_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_HostGeneratesReset_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnRxEnableEnhanced_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_SessionValid_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_FrameNumber_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastTransactionDetails_Default.h</itemPath>
                     <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_Suspend_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ResumeSignaling_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnHandshake_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_FrameNumber_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_InterruptStatus_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_DeviceAddress_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_SleepEntryGuard_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EP0NAKRetry_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EP0LowSpeedConnect_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_PullUpPullDown_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_Suspend_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_StopInIdle_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OnChipTransceiver_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_BDTBaseAddress_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_HostBusyWithToken_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_AutomaticSuspend_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_ASessionValid_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_SOFThreshold_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastEndpoint_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_VbusCharge_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_BDTBaseAddress_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LiveSingleEndedZero_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_VbusCharge_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ModuleBusy_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_VbusDischarge_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ERR_InterruptStatus_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_BSessionEnd_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OnChipPullup_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_SpeedControl_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ModulePower_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_LastPingPong_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnControlTransfer_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_EPnTxRx_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_OTG_Interrupt_Unsupported.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ERR_InterruptStatus_Default.h</itemPath>
+                    <itemPath>../src/config/default/driver/usb/usbfs/src/templates/usb_ModuleBusy_Default.h</itemPath>
                   </logicalFolder>
-                  <itemPath>../src/config/default/driver/usb/usbfs/src/drv_usbfs_variant_mapping.h</itemPath>
                   <itemPath>../src/config/default/driver/usb/usbfs/src/usbfs_registers.h</itemPath>
-                  <itemPath>../src/config/default/driver/usb/usbfs/src/drv_usbfs_local.h</itemPath>
-                  <itemPath>../src/config/default/driver/usb/usbfs/src/plib_usbfs_header.h</itemPath>
+                  <itemPath>../src/config/default/driver/usb/usbfs/src/drv_usbfs_variant_mapping.h</itemPath>
                   <itemPath>../src/config/default/driver/usb/usbfs/src/plib_usbfs.h</itemPath>
+                  <itemPath>../src/config/default/driver/usb/usbfs/src/plib_usbfs_header.h</itemPath>
+                  <itemPath>../src/config/default/driver/usb/usbfs/src/drv_usbfs_local.h</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/default/driver/usb/usbfs/drv_usbfs.h</itemPath>
               </logicalFolder>
-              <itemPath>../src/config/default/driver/usb/drv_usb.h</itemPath>
               <itemPath>../src/config/default/driver/usb/drv_usb_external_dependencies.h</itemPath>
+              <itemPath>../src/config/default/driver/usb/drv_usb.h</itemPath>
             </logicalFolder>
             <itemPath>../src/config/default/driver/driver_common.h</itemPath>
             <itemPath>../src/config/default/driver/driver.h</itemPath>
@@ -316,6 +329,9 @@
             <itemPath>../src/config/default/osal/osal_definitions.h</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="adc" displayName="adc" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/adc/plib_adc.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="clk" displayName="clk" projectFiles="true">
               <itemPath>../src/config/default/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
@@ -328,9 +344,13 @@
             <logicalFolder name="gpio" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/default/peripheral/gpio/plib_gpio.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="ram" displayName="ram" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/ram/plib_ram.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="uart" displayName="uart" projectFiles="true">
               <itemPath>../src/config/default/peripheral/uart/plib_uart_common.h</itemPath>
               <itemPath>../src/config/default/peripheral/uart/plib_uart1.h</itemPath>
+              <itemPath>../src/config/default/peripheral/uart/plib_uart2.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="system" displayName="system" projectFiles="true">
@@ -338,13 +358,31 @@
               <itemPath>../src/config/default/system/command/sys_command.h</itemPath>
             </logicalFolder>
             <logicalFolder name="console" displayName="console" projectFiles="true">
-              <itemPath>../src/config/default/system/console/sys_console.h</itemPath>
-              <itemPath>../src/config/default/system/console/src/sys_console_local.h</itemPath>
               <itemPath>../src/config/default/system/console/src/sys_console_usb_cdc.h</itemPath>
               <itemPath>../src/config/default/system/console/src/sys_console_usb_cdc_definitions.h</itemPath>
+              <itemPath>../src/config/default/system/console/sys_console.h</itemPath>
+              <itemPath>../src/config/default/system/console/src/sys_console_local.h</itemPath>
             </logicalFolder>
             <logicalFolder name="debug" displayName="debug" projectFiles="true">
               <itemPath>../src/config/default/system/debug/sys_debug.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="fs" displayName="fs" projectFiles="true">
+              <logicalFolder name="fat_fs" displayName="fat_fs" projectFiles="true">
+                <logicalFolder name="file_system" displayName="file_system" projectFiles="true">
+                  <itemPath>../src/config/default/system/fs/fat_fs/file_system/ffconf.h</itemPath>
+                  <itemPath>../src/config/default/system/fs/fat_fs/file_system/ff.h</itemPath>
+                </logicalFolder>
+                <logicalFolder name="hardware_access"
+                               displayName="hardware_access"
+                               projectFiles="true">
+                  <itemPath>../src/config/default/system/fs/fat_fs/hardware_access/diskio.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <itemPath>../src/config/default/system/fs/sys_fs_fat_interface.h</itemPath>
+              <itemPath>../src/config/default/system/fs/sys_fs.h</itemPath>
+              <itemPath>../src/config/default/system/fs/src/sys_fs_media_manager_local.h</itemPath>
+              <itemPath>../src/config/default/system/fs/sys_fs_media_manager.h</itemPath>
+              <itemPath>../src/config/default/system/fs/src/sys_fs_local.h</itemPath>
             </logicalFolder>
             <logicalFolder name="int" displayName="int" projectFiles="true">
               <itemPath>../src/config/default/system/int/sys_int.h</itemPath>
@@ -363,24 +401,25 @@
             <itemPath>../src/config/default/system/system_module.h</itemPath>
             <itemPath>../src/config/default/system/sys_random_h2_adapter.h</itemPath>
             <itemPath>../src/config/default/system/sys_time_h2_adapter.h</itemPath>
+            <itemPath>../src/config/default/system/system_media.h</itemPath>
           </logicalFolder>
           <logicalFolder name="usb" displayName="usb" projectFiles="true">
             <logicalFolder name="src" displayName="src" projectFiles="true">
-              <itemPath>../src/config/default/usb/src/usb_device_cdc_local.h</itemPath>
-              <itemPath>../src/config/default/usb/src/usb_external_dependencies.h</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_device_function_driver.h</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device_local.h</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device_mapping.h</itemPath>
-              <itemPath>../src/config/default/usb/src/usb_device_function_driver.h</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_external_dependencies.h</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_device_cdc_local.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/default/usb/usb_cdc.h</itemPath>
-            <itemPath>../src/config/default/usb/usb_device.h</itemPath>
-            <itemPath>../src/config/default/usb/usb_hub.h</itemPath>
-            <itemPath>../src/config/default/usb/usb_common.h</itemPath>
             <itemPath>../src/config/default/usb/usb_host.h</itemPath>
-            <itemPath>../src/config/default/usb/usb_host_hub_interface.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_hub.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_host_client_driver.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_common.h</itemPath>
             <itemPath>../src/config/default/usb/usb_chapter_9.h</itemPath>
             <itemPath>../src/config/default/usb/usb_device_cdc.h</itemPath>
-            <itemPath>../src/config/default/usb/usb_host_client_driver.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_host_hub_interface.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_device.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_cdc.h</itemPath>
           </logicalFolder>
           <itemPath>../src/config/default/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/default/device.h</itemPath>
@@ -395,35 +434,34 @@
           <itemPath>../src/config/default/configuration.h</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
-        <logicalFolder name="Source" displayName="Source" projectFiles="true">
-          <logicalFolder name="include" displayName="include" projectFiles="true">
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/queue.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/timers.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_prototypes.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/event_groups.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/croutine.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/task.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stack_macros.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_syscall_numbers.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/list.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stream_buffer.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/message_buffer.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/portable.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/semphr.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h</itemPath>
+      <logicalFolder name="paho.mqtt.embedded-c"
+                     displayName="paho.mqtt.embedded-c"
+                     projectFiles="true">
+        <logicalFolder name="MQTTClient-C"
+                       displayName="MQTTClient-C"
+                       projectFiles="true">
+          <logicalFolder name="Platforms" displayName="Platforms" projectFiles="true">
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTClient-C/Platforms/MCHP_pic32mzw1.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="portable" displayName="portable" projectFiles="true">
-            <logicalFolder name="MPLAB" displayName="MPLAB" projectFiles="true">
-              <logicalFolder name="PIC32MX" displayName="PIC32MX" projectFiles="true">
-                <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MX/ISR_Support.h</itemPath>
-                <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MX/portmacro.h</itemPath>
-              </logicalFolder>
-            </logicalFolder>
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTClient-C/src/MQTTClient.h</itemPath>
           </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="MQTTPacket" displayName="MQTTPacket" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTConnect.h</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTPacket.h</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTPublish.h</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTSubscribe.h</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTUnsubscribe.h</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/StackTrace.h</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTFormat.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="system" displayName="system" projectFiles="true">
+        <logicalFolder name="tmr" displayName="tmr" projectFiles="true">
+          <itemPath>../src/config/default/system/tmr/sys_tmr.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="wolfcrypt" displayName="wolfcrypt" projectFiles="true">
@@ -580,35 +618,36 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/hash.h</itemPath>
       </logicalFolder>
       <logicalFolder name="wolfssl" displayName="wolfssl" projectFiles="true">
-        <itemPath>../src/third_party/wolfssl/wolfssl/ocsp.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/quic.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/test.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/certs_test.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/ssl.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfio.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/openssl/compat_types.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/version.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/test.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/sniffer_error.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/sniffer.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/openssl/compat_types.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/quic.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/internal.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/callbacks.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/crl.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/version.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/internal.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/certs_test.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/sniffer_error.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/ssl.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/error-ssl.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/ocsp.h</itemPath>
       </logicalFolder>
       <logicalFolder name="zlib" displayName="zlib" projectFiles="true">
-        <itemPath>../src/third_party/zlib/inflate.h</itemPath>
-        <itemPath>../src/third_party/zlib/inffixed.h</itemPath>
-        <itemPath>../src/third_party/zlib/deflate.h</itemPath>
-        <itemPath>../src/third_party/zlib/inftrees.h</itemPath>
-        <itemPath>../src/third_party/zlib/gzguts.h</itemPath>
-        <itemPath>../src/third_party/zlib/inffast.h</itemPath>
-        <itemPath>../src/third_party/zlib/trees.h</itemPath>
-        <itemPath>../src/third_party/zlib/zconf.h</itemPath>
-        <itemPath>../src/third_party/zlib/crc32.h</itemPath>
         <itemPath>../src/third_party/zlib/zlib.h</itemPath>
+        <itemPath>../src/third_party/zlib/deflate.h</itemPath>
         <itemPath>../src/third_party/zlib/zutil.h</itemPath>
+        <itemPath>../src/third_party/zlib/inflate.h</itemPath>
+        <itemPath>../src/third_party/zlib/crc32.h</itemPath>
+        <itemPath>../src/third_party/zlib/zconf.h</itemPath>
+        <itemPath>../src/third_party/zlib/trees.h</itemPath>
+        <itemPath>../src/third_party/zlib/inffast.h</itemPath>
+        <itemPath>../src/third_party/zlib/gzguts.h</itemPath>
+        <itemPath>../src/third_party/zlib/inftrees.h</itemPath>
+        <itemPath>../src/third_party/zlib/inffixed.h</itemPath>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
+      <itemPath>../src/http_server_print.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -630,13 +669,19 @@
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
         <logicalFolder name="default" displayName="default" projectFiles="true">
+          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
+            <itemPath>../src/config/default/bsp/bsp.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="crypto" displayName="crypto" projectFiles="true">
+            <itemPath>../src/config/default/crypto/src/crypto.c</itemPath>
+          </logicalFolder>
           <logicalFolder name="driver" displayName="driver" projectFiles="true">
             <logicalFolder name="ethmac" displayName="ethmac" projectFiles="true">
               <logicalFolder name="src" displayName="src" projectFiles="true">
                 <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
-                  <itemPath>../src/config/default/driver/ethmac/src/dynamic/drv_ethmac.c</itemPath>
                   <itemPath>../src/config/default/driver/ethmac/src/dynamic/drv_eth_pic32_lib.c</itemPath>
                   <itemPath>../src/config/default/driver/ethmac/src/dynamic/drv_ethmac_lib.c</itemPath>
+                  <itemPath>../src/config/default/driver/ethmac/src/dynamic/drv_ethmac.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
@@ -648,11 +693,16 @@
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
+            <logicalFolder name="memory" displayName="memory" projectFiles="true">
+              <itemPath>../src/config/default/driver/memory/src/drv_memory.c</itemPath>
+              <itemPath>../src/config/default/driver/memory/src/drv_memory_file_system.c</itemPath>
+              <itemPath>../src/config/default/driver/memory/src/drv_memory_ram.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="miim" displayName="miim" projectFiles="true">
               <logicalFolder name="src" displayName="src" projectFiles="true">
                 <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
-                  <itemPath>../src/config/default/driver/miim/src/dynamic/drv_miim.c</itemPath>
                   <itemPath>../src/config/default/driver/miim/src/dynamic/drv_miim_pic32m.c</itemPath>
+                  <itemPath>../src/config/default/driver/miim/src/dynamic/drv_miim.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
@@ -684,6 +734,15 @@
                 <itemPath>../src/config/default/library/tcpip/src/dns.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/tcpip_commands.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/telnet.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/tcpip_announce.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/ipv4.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/udp.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/icmp.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/tcp.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/arp.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/http_server.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/berkeley_api.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/dhcp_server.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -700,6 +759,9 @@
             <itemPath>../src/config/default/osal/osal_freertos.c</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="adc" displayName="adc" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/adc/plib_adc.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="clk" displayName="clk" projectFiles="true">
               <itemPath>../src/config/default/peripheral/clk/plib_clk.c</itemPath>
             </logicalFolder>
@@ -712,8 +774,12 @@
             <logicalFolder name="gpio" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/default/peripheral/gpio/plib_gpio.c</itemPath>
             </logicalFolder>
+            <logicalFolder name="ram" displayName="ram" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/ram/plib_ram.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="uart" displayName="uart" projectFiles="true">
               <itemPath>../src/config/default/peripheral/uart/plib_uart1.c</itemPath>
+              <itemPath>../src/config/default/peripheral/uart/plib_uart2.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
@@ -724,8 +790,24 @@
               <itemPath>../src/config/default/system/command/src/sys_command.c</itemPath>
             </logicalFolder>
             <logicalFolder name="console" displayName="console" projectFiles="true">
-              <itemPath>../src/config/default/system/console/src/sys_console.c</itemPath>
               <itemPath>../src/config/default/system/console/src/sys_console_usb_cdc.c</itemPath>
+              <itemPath>../src/config/default/system/console/src/sys_console.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="fs" displayName="fs" projectFiles="true">
+              <logicalFolder name="fat_fs" displayName="fat_fs" projectFiles="true">
+                <logicalFolder name="file_system" displayName="file_system" projectFiles="true">
+                  <itemPath>../src/config/default/system/fs/fat_fs/file_system/ff.c</itemPath>
+                  <itemPath>../src/config/default/system/fs/fat_fs/file_system/ffunicode.c</itemPath>
+                </logicalFolder>
+                <logicalFolder name="hardware_access"
+                               displayName="hardware_access"
+                               projectFiles="true">
+                  <itemPath>../src/config/default/system/fs/fat_fs/hardware_access/diskio.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <itemPath>../src/config/default/system/fs/src/sys_fs_media_manager.c</itemPath>
+              <itemPath>../src/config/default/system/fs/src/sys_fs_fat_interface.c</itemPath>
+              <itemPath>../src/config/default/system/fs/src/sys_fs.c</itemPath>
             </logicalFolder>
             <logicalFolder name="int" displayName="int" projectFiles="true">
               <itemPath>../src/config/default/system/int/src/sys_int.c</itemPath>
@@ -737,12 +819,13 @@
               <itemPath>../src/config/default/system/time/src/sys_time.c</itemPath>
             </logicalFolder>
             <itemPath>../src/config/default/system/sys_time_h2_adapter.c</itemPath>
+            <itemPath>../src/config/default/system/sys_random_h2_adapter.c</itemPath>
           </logicalFolder>
           <logicalFolder name="usb" displayName="usb" projectFiles="true">
             <logicalFolder name="src" displayName="src" projectFiles="true">
+              <itemPath>../src/config/default/usb/src/usb_device_cdc.c</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device_cdc_acm.c</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device.c</itemPath>
-              <itemPath>../src/config/default/usb/src/usb_device_cdc.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <itemPath>../src/config/default/exceptions.c</itemPath>
@@ -754,27 +837,74 @@
           <itemPath>../src/config/default/usb_device_init_data.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
-        <logicalFolder name="Source" displayName="Source" projectFiles="true">
-          <logicalFolder name="portable" displayName="portable" projectFiles="true">
-            <logicalFolder name="MemMang" displayName="MemMang" projectFiles="true">
-              <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/MemMang/heap_1.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="MPLAB" displayName="MPLAB" projectFiles="true">
-              <logicalFolder name="PIC32MX" displayName="PIC32MX" projectFiles="true">
-                <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MX/port.c</itemPath>
-                <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MX/port_asm.S</itemPath>
-              </logicalFolder>
-            </logicalFolder>
+      <logicalFolder name="paho.mqtt.embedded-c"
+                     displayName="paho.mqtt.embedded-c"
+                     projectFiles="true">
+        <logicalFolder name="MQTTClient-C"
+                       displayName="MQTTClient-C"
+                       projectFiles="true">
+          <logicalFolder name="Platforms" displayName="Platforms" projectFiles="true">
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTClient-C/Platforms/MCHP_pic32mzw1.c</itemPath>
           </logicalFolder>
-          <itemPath>../src/third_party/rtos/FreeRTOS/Source/FreeRTOS_tasks.c</itemPath>
-          <itemPath>../src/third_party/rtos/FreeRTOS/Source/croutine.c</itemPath>
-          <itemPath>../src/third_party/rtos/FreeRTOS/Source/timers.c</itemPath>
-          <itemPath>../src/third_party/rtos/FreeRTOS/Source/list.c</itemPath>
-          <itemPath>../src/third_party/rtos/FreeRTOS/Source/event_groups.c</itemPath>
-          <itemPath>../src/third_party/rtos/FreeRTOS/Source/queue.c</itemPath>
-          <itemPath>../src/third_party/rtos/FreeRTOS/Source/stream_buffer.c</itemPath>
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTClient-C/src/MQTTClient.c</itemPath>
+          </logicalFolder>
         </logicalFolder>
+        <logicalFolder name="MQTTPacket" displayName="MQTTPacket" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTConnectServer.c</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTUnsubscribeServer.c</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTUnsubscribeClient.c</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTConnectClient.c</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTPacket.c</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTSubscribeServer.c</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTDeserializePublish.c</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTSubscribeClient.c</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTFormat.c</itemPath>
+            <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTSerializePublish.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
+        <logicalFolder name="dyndns" displayName="dyndns" projectFiles="true">
+          <logicalFolder name="dyndns" displayName="dyndns" projectFiles="true">
+            <itemPath>../src/web_pages/dyndns/index.htm</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="email" displayName="email" projectFiles="true">
+          <logicalFolder name="email" displayName="email" projectFiles="true">
+            <itemPath>../src/web_pages/email/index.htm</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="protect" displayName="protect" projectFiles="true">
+          <logicalFolder name="protect" displayName="protect" projectFiles="true">
+            <itemPath>../src/web_pages/protect/reboot.htm</itemPath>
+            <itemPath>../src/web_pages/protect/index.htm</itemPath>
+            <itemPath>../src/web_pages/protect/reboot.cgi</itemPath>
+            <itemPath>../src/web_pages/protect/config.htm</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="snmp" displayName="snmp" projectFiles="true">
+          <logicalFolder name="snmp" displayName="snmp" projectFiles="true">
+            <itemPath>../src/web_pages/snmp/snmpconfig.htm</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <itemPath>../src/web_pages/leds.cgi</itemPath>
+        <itemPath>../src/web_pages/mchp.js</itemPath>
+        <itemPath>../src/web_pages/auth.htm</itemPath>
+        <itemPath>../src/web_pages/snmp.bib</itemPath>
+        <itemPath>../src/web_pages/forms.htm</itemPath>
+        <itemPath>../src/web_pages/status.xml</itemPath>
+        <itemPath>../src/web_pages/harmony.gif</itemPath>
+        <itemPath>../src/web_pages/mchp.css</itemPath>
+        <itemPath>../src/web_pages/footer.htm</itemPath>
+        <itemPath>../src/web_pages/cookies.htm</itemPath>
+        <itemPath>../src/web_pages/upload.htm</itemPath>
+        <itemPath>../src/web_pages/dynvars.htm</itemPath>
+        <itemPath>../src/web_pages/ssi.htm</itemPath>
+        <itemPath>../src/web_pages/mchp.gif</itemPath>
+        <itemPath>../src/web_pages/index.htm</itemPath>
+        <itemPath>../src/web_pages/header.htm</itemPath>
       </logicalFolder>
       <logicalFolder name="wolfcrypt" displayName="wolfcrypt" projectFiles="true">
         <logicalFolder name="port" displayName="port" projectFiles="true">
@@ -898,44 +1028,46 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/fe_448.c</itemPath>
       </logicalFolder>
       <logicalFolder name="wolfssl" displayName="wolfssl" projectFiles="true">
-        <itemPath>../src/third_party/wolfssl/src/conf.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/crl.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/ssl_asn1.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/dtls.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/tls13.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/ssl_crypto.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/dtls13.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/ssl.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/ssl_bn.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/ocsp.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/quic.c</itemPath>
         <itemPath>../src/third_party/wolfssl/src/x509.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/pk.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/tls.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/ssl_bn.c</itemPath>
         <itemPath>../src/third_party/wolfssl/src/keys.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/ssl_misc.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/sniffer.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/wolfio.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/internal.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/src/ssl_certman.c</itemPath>
         <itemPath>../src/third_party/wolfssl/src/x509_str.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/tls13.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/ssl_certman.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/ocsp.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/internal.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/pk.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/quic.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/ssl_crypto.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/ssl_misc.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/ssl.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/wolfio.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/sniffer.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/ssl_asn1.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/tls.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/dtls13.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/dtls.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/crl.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/conf.c</itemPath>
       </logicalFolder>
       <logicalFolder name="zlib" displayName="zlib" projectFiles="true">
-        <itemPath>../src/third_party/zlib/inflate.c</itemPath>
+        <itemPath>../src/third_party/zlib/zutil.c</itemPath>
         <itemPath>../src/third_party/zlib/crc32.c</itemPath>
         <itemPath>../src/third_party/zlib/deflate.c</itemPath>
-        <itemPath>../src/third_party/zlib/inftrees.c</itemPath>
-        <itemPath>../src/third_party/zlib/infback.c</itemPath>
-        <itemPath>../src/third_party/zlib/compress.c</itemPath>
-        <itemPath>../src/third_party/zlib/inffast.c</itemPath>
-        <itemPath>../src/third_party/zlib/trees.c</itemPath>
-        <itemPath>../src/third_party/zlib/gzclose.c</itemPath>
         <itemPath>../src/third_party/zlib/adler32.c</itemPath>
         <itemPath>../src/third_party/zlib/uncompr.c</itemPath>
-        <itemPath>../src/third_party/zlib/zutil.c</itemPath>
+        <itemPath>../src/third_party/zlib/inflate.c</itemPath>
+        <itemPath>../src/third_party/zlib/trees.c</itemPath>
+        <itemPath>../src/third_party/zlib/inffast.c</itemPath>
+        <itemPath>../src/third_party/zlib/infback.c</itemPath>
+        <itemPath>../src/third_party/zlib/compress.c</itemPath>
+        <itemPath>../src/third_party/zlib/gzclose.c</itemPath>
+        <itemPath>../src/third_party/zlib/inftrees.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/http_server_print.c</itemPath>
+      <itemPath>../src/custom_http_server_app.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -951,8 +1083,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>SKDEPIC32PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.40</languageToolchainVersion>
-        <platform>2</platform>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="PIC32MX_DFP" vendor="Microchip" version="1.6.369"/>
@@ -987,6 +1119,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="cast-align" value="false"/>
         <property key="code-model" value="default"/>
         <property key="const-model" value="default"/>
@@ -1001,7 +1134,7 @@
         <property key="exclude-floating-point" value="false"/>
         <property key="expand-pragma-config" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/default;../src/config/default/library;../src/config/default/library/tcpip/src;../src/config/default/library/tcpip/src/common;../src/third_party/paho.mqtt.embedded-c;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MX;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl;../src/third_party/zlib"/>
+                  value="../src;../src/config/default;../src/config/default/library;../src/config/default/library/tcpip/src;../src/config/default/library/tcpip/src/common;../src/config/default/system/fs/fat_fs/file_system;../src/config/default/system/fs/fat_fs/hardware_access;../src/third_party/paho.mqtt.embedded-c;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MX;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl;../src/third_party/zlib"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -1036,6 +1169,7 @@
         <property key="additional-options-chop-files" value="false"/>
       </C32-AR>
       <C32-AS>
+        <property key="appendMe" value=""/>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
         <property key="exclude-floating-point-library" value="false"/>
@@ -1068,6 +1202,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -1113,6 +1248,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -1122,7 +1258,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/default;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MX"/>
+                  value="../src;../src/config/default;../src/config/default/system/fs/fat_fs/file_system;../src/config/default/system/fs/fat_fs/hardware_access;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MX"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>

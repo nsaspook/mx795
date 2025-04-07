@@ -70,7 +70,6 @@ static void F_USB_DEVICE_Tasks(  void *pvParameters  )
     }
 }
 
-
 static void lSYS_CONSOLE_0_Tasks(  void *pvParameters  )
 {
     while(true)
@@ -80,16 +79,6 @@ static void lSYS_CONSOLE_0_Tasks(  void *pvParameters  )
     }
 }
 
-
-
-void _TCPIP_STACK_Task(  void *pvParameters  )
-{
-    while(1)
-    {
-        TCPIP_STACK_Task(sysObj.tcpip);
-        vTaskDelay(1 / portTICK_PERIOD_MS);
-    }
-}
 
 
 /* Handle for the APP_Tasks. */
@@ -102,6 +91,16 @@ static void lAPP_Tasks(  void *pvParameters  )
     while(true)
     {
         APP_Tasks();
+    }
+}
+
+
+void _TCPIP_STACK_Task(  void *pvParameters  )
+{
+    while(1)
+    {
+        TCPIP_STACK_Task(sysObj.tcpip);
+        vTaskDelay(1 / portTICK_PERIOD_MS);
     }
 }
 
@@ -143,6 +142,17 @@ void _NET_PRES_Tasks(  void *pvParameters  )
 }
 
 
+static void lSYS_FS_Tasks(  void *pvParameters  )
+{
+    while(true)
+    {
+        SYS_FS_Tasks();
+        vTaskDelay(10U / portTICK_PERIOD_MS);
+    }
+}
+
+
+
 
 
 // *****************************************************************************
@@ -180,9 +190,19 @@ void SYS_Tasks ( void )
 
 
 
+    (void) xTaskCreate( lSYS_FS_Tasks,
+        "SYS_FS_TASKS",
+        SYS_FS_STACK_SIZE,
+        (void*)NULL,
+        SYS_FS_PRIORITY ,
+        (TaskHandle_t*)NULL
+    );
+
+
 
     /* Maintain Device Drivers */
-        xTaskCreate( _DRV_MIIM_Task,
+    
+    xTaskCreate( _DRV_MIIM_Task,
         "DRV_MIIM_Tasks",
         DRV_MIIM_RTOS_STACK_SIZE,
         (void*)NULL,
