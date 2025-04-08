@@ -313,7 +313,7 @@ CK_RV pkcs11_init(CK_C_INITIALIZE_ARGS const *pInitArgs)
 
     if (CKF_OS_LOCKING_OK == (CKF_OS_LOCKING_OK & pInitArgs->flags))
     {
-        /* 2. If the flag is set, and the function pointer fields aren?t supplied
+        /* 2. If the flag is set, and the function pointer fields aren’t supplied
               (i.e., they all have the value NULL_PTR), that means that the application
               will be performing multi-threaded Cryptoki access, and the library needs
               to use the native operating system primitives to ensure safe multi-threaded
@@ -353,7 +353,7 @@ CK_RV pkcs11_init(CK_C_INITIALIZE_ARGS const *pInitArgs)
     {
         if (allset)
         {
-            /* 3. If the flag isn?t set, and the function pointer fields are supplied (i.e.,
+            /* 3. If the flag isn’t set, and the function pointer fields are supplied (i.e.,
                   they all have non-NULL_PTR values), that means that the application will
                   be performing multi-threaded Cryptoki access, and the library needs to use
                   the supplied function pointers for mutex-handling to ensure safe multi-threaded
@@ -369,8 +369,8 @@ CK_RV pkcs11_init(CK_C_INITIALIZE_ARGS const *pInitArgs)
         }
         else
         {
-            /* 1. If the flag isn?t set, and the function pointer fields aren?t supplied (i.e., they all
-                  have the value NULL_PTR), that means that the application won?t be accessing the
+            /* 1. If the flag isn’t set, and the function pointer fields aren’t supplied (i.e., they all
+                  have the value NULL_PTR), that means that the application won’t be accessing the
                   Cryptoki library from multiple threads simultaneously. */
 
             /* Do nothing - user takes responsibility to ensure no concurrent access */

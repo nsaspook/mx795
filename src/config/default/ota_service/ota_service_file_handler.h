@@ -46,6 +46,7 @@
 #define OTA_SERVICE_FILE_HANDLER_H
 
 #include "ota_service_control_block.h"
+#include "configuration.h"
 
 /* Provide C++ Compatibility */
 #ifdef __cplusplus
@@ -58,46 +59,22 @@ extern "C" {
 // *****************************************************************************
 // *****************************************************************************
 
+#define FLASH_START                      (0x9d000000UL)
+#define FLASH_LENGTH                     (0x80000UL)
+#define PAGE_SIZE                        (512UL)
+#define ERASE_BLOCK_SIZE                 (4096UL)
 
 
-#define DATA_SIZE                        RAM_PAGE_SIZE
+
+#define DATA_SIZE                        PAGE_SIZE
 
 #define BUFFER_SIZE(x, y)                ((y) > (x)? ((((y) % (x)) != 0U)?((((y) / (x)) + 1U) * (x)) : (((y) / (x)) * (x))) : (x))
 
 #define OTA_CONTROL_BLOCK_SIZE           sizeof(OTA_CONTROL_BLOCK)
-#define OTA_CONTROL_BLOCK_PAGE_SIZE      RAM_PAGE_SIZE
+#define OTA_CONTROL_BLOCK_PAGE_SIZE      PAGE_SIZE
 
 #define OTA_CONTROL_BLOCK_BUFFER_SIZE    BUFFER_SIZE(OTA_CONTROL_BLOCK_PAGE_SIZE, OTA_CONTROL_BLOCK_SIZE)
 
-typedef enum
-{
-    /* Transfer being processed */
-    OTA_MEM_TRANSFER_BUSY,
-
-    /* Transfer is successfully completed */
-    OTA_MEM_TRANSFER_COMPLETED,
-
-    /* Transfer had error */
-    OTA_MEM_TRANSFER_ERROR_UNKNOWN
-
-} OTA_MEM_TRANSFER_STATUS;
-
-typedef struct
-{
-    uint32_t read_blockSize;
-    uint32_t read_numBlocks;
-    uint32_t numReadRegions;
-
-    uint32_t write_blockSize;
-    uint32_t write_numBlocks;
-    uint32_t numWriteRegions;
-
-    uint32_t erase_blockSize;
-    uint32_t erase_numBlocks;
-    uint32_t numEraseRegions;
-
-    uint32_t blockStartAddress;
-} OTA_MEMORY_GEOMETRY;
 
 typedef enum
 {
@@ -143,10 +120,6 @@ typedef struct __attribute__((packed))
 typedef struct
 {
     OTA_SERVICE_FH_STATE state;
-
-    uintptr_t handle;
-
-    OTA_MEMORY_GEOMETRY geometry;
 
     uint32_t nFlashBytesWritten;
 

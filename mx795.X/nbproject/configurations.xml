@@ -29,7 +29,6 @@
                 <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
                   <itemPath>../src/config/default/driver/ethphy/src/dynamic/drv_extphy_dp83848.h</itemPath>
                   <itemPath>../src/config/default/driver/ethphy/src/dynamic/drv_extphy_regs.h</itemPath>
-                  <itemPath>../src/config/default/driver/ethphy/src/dynamic/drv_extphy_dp83640.h</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/default/driver/ethphy/src/drv_ethphy_local.h</itemPath>
               </logicalFolder>
@@ -38,9 +37,7 @@
             <logicalFolder name="memory" displayName="memory" projectFiles="true">
               <itemPath>../src/config/default/driver/memory/drv_memory.h</itemPath>
               <itemPath>../src/config/default/driver/memory/src/drv_memory_local.h</itemPath>
-              <itemPath>../src/config/default/driver/memory/src/drv_memory_file_system.h</itemPath>
               <itemPath>../src/config/default/driver/memory/drv_memory_definitions.h</itemPath>
-              <itemPath>../src/config/default/driver/memory/drv_memory_ram.h</itemPath>
             </logicalFolder>
             <logicalFolder name="miim" displayName="miim" projectFiles="true">
               <logicalFolder name="src" displayName="src" projectFiles="true">
@@ -177,8 +174,6 @@
               <itemPath>../src/config/default/driver/usb/drv_usb_external_dependencies.h</itemPath>
               <itemPath>../src/config/default/driver/usb/drv_usb.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/default/driver/driver_common.h</itemPath>
-            <itemPath>../src/config/default/driver/driver.h</itemPath>
           </logicalFolder>
           <logicalFolder name="library" displayName="library" projectFiles="true">
             <logicalFolder name="cryptoauthlib"
@@ -462,11 +457,6 @@
               <itemPath>../src/config/default/net_pres/pres/net_pres_certstore.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="osal" displayName="osal" projectFiles="true">
-            <itemPath>../src/config/default/osal/osal_freertos.h</itemPath>
-            <itemPath>../src/config/default/osal/osal.h</itemPath>
-            <itemPath>../src/config/default/osal/osal_definitions.h</itemPath>
-          </logicalFolder>
           <logicalFolder name="ota_service" displayName="ota_service" projectFiles="true">
             <itemPath>../src/config/default/ota_service/ota_config.h</itemPath>
             <itemPath>../src/config/default/ota_service/ota_service.h</itemPath>
@@ -500,7 +490,12 @@
               <itemPath>../src/config/default/peripheral/uart/plib_uart_common.h</itemPath>
               <itemPath>../src/config/default/peripheral/uart/plib_uart1.h</itemPath>
               <itemPath>../src/config/default/peripheral/uart/plib_uart2.h</itemPath>
+              <itemPath>../src/config/default/peripheral/uart/plib_uart3.h</itemPath>
+              <itemPath>../src/config/default/peripheral/uart/plib_uart4.h</itemPath>
             </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="rnbd" displayName="rnbd" projectFiles="true">
+            <itemPath>../src/config/default/rnbd/rnbd_interface.h</itemPath>
           </logicalFolder>
           <logicalFolder name="system" displayName="system" projectFiles="true">
             <logicalFolder name="command" displayName="command" projectFiles="true">
@@ -511,9 +506,11 @@
               <itemPath>../src/config/default/system/console/src/sys_console_usb_cdc_definitions.h</itemPath>
               <itemPath>../src/config/default/system/console/sys_console.h</itemPath>
               <itemPath>../src/config/default/system/console/src/sys_console_local.h</itemPath>
+              <itemPath>../src/config/default/system/console/src/sys_console_uart.h</itemPath>
+              <itemPath>../src/config/default/system/console/src/sys_console_uart_definitions.h</itemPath>
             </logicalFolder>
             <logicalFolder name="debug" displayName="debug" projectFiles="true">
-              <itemPath>../src/config/default/system/debug/sys_debug.h</itemPath>
+              <itemPath>../src/config/default/system/debug/src/sys_debug_local.h</itemPath>
             </logicalFolder>
             <logicalFolder name="fs" displayName="fs" projectFiles="true">
               <logicalFolder name="fat_fs" displayName="fat_fs" projectFiles="true">
@@ -533,10 +530,6 @@
               <itemPath>../src/config/default/system/fs/sys_fs_media_manager.h</itemPath>
               <itemPath>../src/config/default/system/fs/src/sys_fs_local.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="int" displayName="int" projectFiles="true">
-              <itemPath>../src/config/default/system/int/sys_int.h</itemPath>
-              <itemPath>../src/config/default/system/int/sys_int_mapping.h</itemPath>
-            </logicalFolder>
             <logicalFolder name="reset" displayName="reset" projectFiles="true">
               <itemPath>../src/config/default/system/reset/sys_reset.h</itemPath>
             </logicalFolder>
@@ -545,12 +538,8 @@
               <itemPath>../src/config/default/system/time/sys_time.h</itemPath>
               <itemPath>../src/config/default/system/time/src/sys_time_local.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/default/system/system.h</itemPath>
-            <itemPath>../src/config/default/system/system_common.h</itemPath>
-            <itemPath>../src/config/default/system/system_module.h</itemPath>
             <itemPath>../src/config/default/system/sys_random_h2_adapter.h</itemPath>
             <itemPath>../src/config/default/system/sys_time_h2_adapter.h</itemPath>
-            <itemPath>../src/config/default/system/system_media.h</itemPath>
           </logicalFolder>
           <logicalFolder name="third_party_adapter"
                          displayName="third_party_adapter"
@@ -594,12 +583,40 @@
           <itemPath>../src/config/default/interrupts.h</itemPath>
           <itemPath>../src/config/default/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/default/system_config.h</itemPath>
-          <itemPath>../src/config/default/user.h</itemPath>
           <itemPath>../src/config/default/system_definitions.h</itemPath>
           <itemPath>../src/config/default/config.h</itemPath>
-          <itemPath>../src/config/default/sys_tasks.h</itemPath>
-          <itemPath>../src/config/default/configuration.h</itemPath>
           <itemPath>../src/config/default/user_settings.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
+        <logicalFolder name="Source" displayName="Source" projectFiles="true">
+          <logicalFolder name="include" displayName="include" projectFiles="true">
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stack_macros.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_syscall_numbers.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_prototypes.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/timers.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/queue.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/message_buffer.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/list.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/croutine.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/semphr.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/task.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/event_groups.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stream_buffer.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/portable.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="portable" displayName="portable" projectFiles="true">
+            <logicalFolder name="MPLAB" displayName="MPLAB" projectFiles="true">
+              <logicalFolder name="PIC32MX" displayName="PIC32MX" projectFiles="true">
+                <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MX/portmacro.h</itemPath>
+                <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MX/ISR_Support.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="paho.mqtt.embedded-c"
@@ -626,6 +643,9 @@
             <itemPath>../src/third_party/paho.mqtt.embedded-c/MQTTPacket/src/MQTTFormat.h</itemPath>
           </logicalFolder>
         </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="rnbd" displayName="rnbd" projectFiles="true">
+        <itemPath>../src/rnbd/rnbd.h</itemPath>
       </logicalFolder>
       <logicalFolder name="system" displayName="system" projectFiles="true">
         <logicalFolder name="tmr" displayName="tmr" projectFiles="true">
@@ -827,7 +847,6 @@
         <itemPath>../src/third_party/zlib/inftrees.h</itemPath>
         <itemPath>../src/third_party/zlib/inffixed.h</itemPath>
       </logicalFolder>
-      <itemPath>../src/app.h</itemPath>
       <itemPath>../src/http_server_print.h</itemPath>
       <itemPath>../src/mib.h</itemPath>
       <itemPath>../src/app_mqtt_task.h</itemPath>
@@ -873,14 +892,11 @@
                 <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
                   <itemPath>../src/config/default/driver/ethphy/src/dynamic/drv_ethphy.c</itemPath>
                   <itemPath>../src/config/default/driver/ethphy/src/dynamic/drv_extphy_dp83848.c</itemPath>
-                  <itemPath>../src/config/default/driver/ethphy/src/dynamic/drv_extphy_dp83640.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="memory" displayName="memory" projectFiles="true">
               <itemPath>../src/config/default/driver/memory/src/drv_memory.c</itemPath>
-              <itemPath>../src/config/default/driver/memory/src/drv_memory_file_system.c</itemPath>
-              <itemPath>../src/config/default/driver/memory/src/drv_memory_ram.c</itemPath>
             </logicalFolder>
             <logicalFolder name="miim" displayName="miim" projectFiles="true">
               <logicalFolder name="src" displayName="src" projectFiles="true">
@@ -893,8 +909,8 @@
             <logicalFolder name="usb" displayName="usb" projectFiles="true">
               <logicalFolder name="usbfs" displayName="usbfs" projectFiles="true">
                 <logicalFolder name="src" displayName="src" projectFiles="true">
-                  <itemPath>../src/config/default/driver/usb/usbfs/src/drv_usbfs_device.c</itemPath>
                   <itemPath>../src/config/default/driver/usb/usbfs/src/drv_usbfs.c</itemPath>
+                  <itemPath>../src/config/default/driver/usb/usbfs/src/drv_usbfs_host.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
@@ -939,7 +955,7 @@
                 <itemPath>../src/config/default/library/cryptoauthlib/hal/hal_pic32_delay.c</itemPath>
                 <itemPath>../src/config/default/library/cryptoauthlib/hal/kit_protocol.c</itemPath>
                 <itemPath>../src/config/default/library/cryptoauthlib/hal/atca_hal.c</itemPath>
-                <itemPath>../src/config/default/library/cryptoauthlib/hal/hal_uart_harmony.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/hal/hal_freertos.c</itemPath>
               </logicalFolder>
               <logicalFolder name="jwt" displayName="jwt" projectFiles="true">
                 <itemPath>../src/config/default/library/cryptoauthlib/jwt/atca_jwt.c</itemPath>
@@ -1115,9 +1131,7 @@
                 <itemPath>../src/config/default/library/tcpip/src/arp.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/http_server.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/berkeley_api.c</itemPath>
-                <itemPath>../src/config/default/library/tcpip/src/dhcp_server.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/icmpv6.c</itemPath>
-                <itemPath>../src/config/default/library/tcpip/src/tftpc.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/http.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/sntp.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/zero_conf_helper.c</itemPath>
@@ -1149,9 +1163,6 @@
               <itemPath>../src/config/default/net_pres/pres/net_pres_cert_store.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="osal" displayName="osal" projectFiles="true">
-            <itemPath>../src/config/default/osal/osal_freertos.c</itemPath>
-          </logicalFolder>
           <logicalFolder name="ota_service" displayName="ota_service" projectFiles="true">
             <itemPath>../src/config/default/ota_service/ota_service.c</itemPath>
             <itemPath>../src/config/default/ota_service/ota_service_file_handler.c</itemPath>
@@ -1182,7 +1193,12 @@
             <logicalFolder name="uart" displayName="uart" projectFiles="true">
               <itemPath>../src/config/default/peripheral/uart/plib_uart1.c</itemPath>
               <itemPath>../src/config/default/peripheral/uart/plib_uart2.c</itemPath>
+              <itemPath>../src/config/default/peripheral/uart/plib_uart3.c</itemPath>
+              <itemPath>../src/config/default/peripheral/uart/plib_uart4.c</itemPath>
             </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="rnbd" displayName="rnbd" projectFiles="true">
+            <itemPath>../src/config/default/rnbd/rnbd_interface.c</itemPath>
           </logicalFolder>
           <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
             <itemPath>../src/config/default/stdio/xc32_monitor.c</itemPath>
@@ -1194,6 +1210,10 @@
             <logicalFolder name="console" displayName="console" projectFiles="true">
               <itemPath>../src/config/default/system/console/src/sys_console_usb_cdc.c</itemPath>
               <itemPath>../src/config/default/system/console/src/sys_console.c</itemPath>
+              <itemPath>../src/config/default/system/console/src/sys_console_uart.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="debug" displayName="debug" projectFiles="true">
+              <itemPath>../src/config/default/system/debug/src/sys_debug.c</itemPath>
             </logicalFolder>
             <logicalFolder name="fs" displayName="fs" projectFiles="true">
               <logicalFolder name="fat_fs" displayName="fat_fs" projectFiles="true">
@@ -1211,9 +1231,6 @@
               <itemPath>../src/config/default/system/fs/src/sys_fs_fat_interface.c</itemPath>
               <itemPath>../src/config/default/system/fs/src/sys_fs.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="int" displayName="int" projectFiles="true">
-              <itemPath>../src/config/default/system/int/src/sys_int.c</itemPath>
-            </logicalFolder>
             <logicalFolder name="reset" displayName="reset" projectFiles="true">
               <itemPath>../src/config/default/system/reset/sys_reset.c</itemPath>
             </logicalFolder>
@@ -1221,7 +1238,6 @@
               <itemPath>../src/config/default/system/time/src/sys_time.c</itemPath>
             </logicalFolder>
             <itemPath>../src/config/default/system/sys_time_h2_adapter.c</itemPath>
-            <itemPath>../src/config/default/system/sys_random_h2_adapter.c</itemPath>
           </logicalFolder>
           <logicalFolder name="third_party_adapter"
                          displayName="third_party_adapter"
@@ -1247,10 +1263,31 @@
           <itemPath>../src/config/default/exceptions.c</itemPath>
           <itemPath>../src/config/default/interrupts.c</itemPath>
           <itemPath>../src/config/default/initialization.c</itemPath>
-          <itemPath>../src/config/default/tasks.c</itemPath>
           <itemPath>../src/config/default/interrupts_a.S</itemPath>
           <itemPath>../src/config/default/freertos_hooks.c</itemPath>
           <itemPath>../src/config/default/usb_device_init_data.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
+        <logicalFolder name="Source" displayName="Source" projectFiles="true">
+          <logicalFolder name="portable" displayName="portable" projectFiles="true">
+            <logicalFolder name="MemMang" displayName="MemMang" projectFiles="true">
+              <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/MemMang/heap_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="MPLAB" displayName="MPLAB" projectFiles="true">
+              <logicalFolder name="PIC32MX" displayName="PIC32MX" projectFiles="true">
+                <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MX/port.c</itemPath>
+                <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MX/port_asm.S</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/list.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/timers.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/queue.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/event_groups.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/croutine.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/stream_buffer.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/FreeRTOS_tasks.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="paho.mqtt.embedded-c"
@@ -1281,6 +1318,9 @@
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="rnbd" displayName="rnbd" projectFiles="true">
+        <itemPath>../src/rnbd/rnbd.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="third_party" displayName="third_party" projectFiles="true">
         <logicalFolder name="wolfMQTT" displayName="wolfMQTT" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
@@ -1291,107 +1331,83 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
-        <logicalFolder name="root" displayName="root" projectFiles="true">
-          <logicalFolder name=".mcc" displayName=".mcc" projectFiles="true">
-            <logicalFolder name="HarmonyContent"
-                           displayName="HarmonyContent"
-                           projectFiles="true">
-              <logicalFolder name="net" displayName="net" projectFiles="true">
-                <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
-                  <logicalFolder name="dyndns" displayName="dyndns" projectFiles="true">
-                    <logicalFolder name="root" displayName="root" projectFiles="true">
-                      <logicalFolder name=".mcc" displayName=".mcc" projectFiles="true">
-                        <logicalFolder name="HarmonyContent"
-                                       displayName="HarmonyContent"
-                                       projectFiles="true">
-                          <logicalFolder name="net" displayName="net" projectFiles="true">
-                            <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
-                              <logicalFolder name="dyndns" displayName="dyndns" projectFiles="true">
-                                <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/dyndns/index.htm</itemPath>
-                              </logicalFolder>
-                            </logicalFolder>
+        <logicalFolder name="ldrv" displayName="ldrv" projectFiles="true">
+          <logicalFolder name="Harmony3" displayName="Harmony3" projectFiles="true">
+            <logicalFolder name="net" displayName="net" projectFiles="true">
+              <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
+                <logicalFolder name="dyndns" displayName="dyndns" projectFiles="true">
+                  <logicalFolder name="ldrv" displayName="ldrv" projectFiles="true">
+                    <logicalFolder name="Harmony3" displayName="Harmony3" projectFiles="true">
+                      <logicalFolder name="net" displayName="net" projectFiles="true">
+                        <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
+                          <logicalFolder name="dyndns" displayName="dyndns" projectFiles="true">
+                            <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/dyndns/index.htm</itemPath>
                           </logicalFolder>
                         </logicalFolder>
                       </logicalFolder>
                     </logicalFolder>
                   </logicalFolder>
-                  <logicalFolder name="email" displayName="email" projectFiles="true">
-                    <logicalFolder name="root" displayName="root" projectFiles="true">
-                      <logicalFolder name=".mcc" displayName=".mcc" projectFiles="true">
-                        <logicalFolder name="HarmonyContent"
-                                       displayName="HarmonyContent"
-                                       projectFiles="true">
-                          <logicalFolder name="net" displayName="net" projectFiles="true">
-                            <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
-                              <logicalFolder name="email" displayName="email" projectFiles="true">
-                                <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/email/index.htm</itemPath>
-                              </logicalFolder>
-                            </logicalFolder>
+                </logicalFolder>
+                <logicalFolder name="email" displayName="email" projectFiles="true">
+                  <logicalFolder name="ldrv" displayName="ldrv" projectFiles="true">
+                    <logicalFolder name="Harmony3" displayName="Harmony3" projectFiles="true">
+                      <logicalFolder name="net" displayName="net" projectFiles="true">
+                        <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
+                          <logicalFolder name="email" displayName="email" projectFiles="true">
+                            <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/email/index.htm</itemPath>
                           </logicalFolder>
                         </logicalFolder>
                       </logicalFolder>
                     </logicalFolder>
                   </logicalFolder>
-                  <logicalFolder name="protect" displayName="protect" projectFiles="true">
-                    <logicalFolder name="root" displayName="root" projectFiles="true">
-                      <logicalFolder name=".mcc" displayName=".mcc" projectFiles="true">
-                        <logicalFolder name="HarmonyContent"
-                                       displayName="HarmonyContent"
-                                       projectFiles="true">
-                          <logicalFolder name="net" displayName="net" projectFiles="true">
-                            <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
-                              <logicalFolder name="protect" displayName="protect" projectFiles="true">
-                                <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/protect/reboot.htm</itemPath>
-                                <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/protect/config.htm</itemPath>
-                                <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/protect/reboot.cgi</itemPath>
-                                <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/protect/index.htm</itemPath>
-                              </logicalFolder>
-                            </logicalFolder>
+                </logicalFolder>
+                <logicalFolder name="ldrv" displayName="ldrv" projectFiles="true">
+                  <logicalFolder name="Harmony3" displayName="Harmony3" projectFiles="true">
+                    <logicalFolder name="net" displayName="net" projectFiles="true">
+                      <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/footer.htm</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/status.xml</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/harmony.gif</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/mchp.js</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/index.htm</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/forms.htm</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/dynvars.htm</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/mchp.gif</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/ssi.htm</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/upload.htm</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/snmp.bib</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/leds.cgi</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/auth.htm</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/mchp.css</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/header.htm</itemPath>
+                        <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/cookies.htm</itemPath>
+                      </logicalFolder>
+                    </logicalFolder>
+                  </logicalFolder>
+                </logicalFolder>
+                <logicalFolder name="protect" displayName="protect" projectFiles="true">
+                  <logicalFolder name="ldrv" displayName="ldrv" projectFiles="true">
+                    <logicalFolder name="Harmony3" displayName="Harmony3" projectFiles="true">
+                      <logicalFolder name="net" displayName="net" projectFiles="true">
+                        <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
+                          <logicalFolder name="protect" displayName="protect" projectFiles="true">
+                            <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/protect/index.htm</itemPath>
+                            <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/protect/reboot.cgi</itemPath>
+                            <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/protect/config.htm</itemPath>
+                            <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/protect/reboot.htm</itemPath>
                           </logicalFolder>
                         </logicalFolder>
                       </logicalFolder>
                     </logicalFolder>
                   </logicalFolder>
-                  <logicalFolder name="root" displayName="root" projectFiles="true">
-                    <logicalFolder name=".mcc" displayName=".mcc" projectFiles="true">
-                      <logicalFolder name="HarmonyContent"
-                                     displayName="HarmonyContent"
-                                     projectFiles="true">
-                        <logicalFolder name="net" displayName="net" projectFiles="true">
-                          <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/harmony.gif</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/cookies.htm</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/header.htm</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/forms.htm</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/dynvars.htm</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/upload.htm</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/mchp.js</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/leds.cgi</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/mchp.css</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/ssi.htm</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/footer.htm</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/status.xml</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/snmp.bib</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/mchp.gif</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/index.htm</itemPath>
-                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/auth.htm</itemPath>
-                          </logicalFolder>
-                        </logicalFolder>
-                      </logicalFolder>
-                    </logicalFolder>
-                  </logicalFolder>
-                  <logicalFolder name="snmp" displayName="snmp" projectFiles="true">
-                    <logicalFolder name="root" displayName="root" projectFiles="true">
-                      <logicalFolder name=".mcc" displayName=".mcc" projectFiles="true">
-                        <logicalFolder name="HarmonyContent"
-                                       displayName="HarmonyContent"
-                                       projectFiles="true">
-                          <logicalFolder name="net" displayName="net" projectFiles="true">
-                            <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
-                              <logicalFolder name="snmp" displayName="snmp" projectFiles="true">
-                                <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/snmp/snmpconfig.htm</itemPath>
-                              </logicalFolder>
-                            </logicalFolder>
+                </logicalFolder>
+                <logicalFolder name="snmp" displayName="snmp" projectFiles="true">
+                  <logicalFolder name="ldrv" displayName="ldrv" projectFiles="true">
+                    <logicalFolder name="Harmony3" displayName="Harmony3" projectFiles="true">
+                      <logicalFolder name="net" displayName="net" projectFiles="true">
+                        <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
+                          <logicalFolder name="snmp" displayName="snmp" projectFiles="true">
+                            <itemPath>../src/web_pages/ldrv/Harmony3/net/web_pages/snmp/snmpconfig.htm</itemPath>
                           </logicalFolder>
                         </logicalFolder>
                       </logicalFolder>
@@ -1562,7 +1578,6 @@
         <itemPath>../src/third_party/zlib/inftrees.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
-      <itemPath>../src/app.c</itemPath>
       <itemPath>../src/http_server_print.c</itemPath>
       <itemPath>../src/custom_http_server_app.c</itemPath>
       <itemPath>../src/custom_snmp_app.c</itemPath>
@@ -1722,7 +1737,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value="102400"/>
+        <property key="heap-size" value="1024"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>

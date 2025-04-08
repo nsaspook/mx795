@@ -116,7 +116,7 @@ static bool OTA_SERVICE_FH_WaitForXferComplete(void)
 
     do
     {
-        transferStatus = (OTA_MEM_TRANSFER_STATUS)RAM_TransferStatusGet(otaFileHandlerData.handle);
+        transferStatus = (OTA_MEM_TRANSFER_STATUS)_TransferStatusGet(otaFileHandlerData.handle);
 
     } while (transferStatus == OTA_MEM_TRANSFER_BUSY);
 
@@ -168,7 +168,7 @@ bool OTA_SERVICE_FH_CtrlBlkRead(OTA_CONTROL_BLOCK *controlBlock, uint32_t length
 
         for (count = 0U; count < length; count += OTA_CONTROL_BLOCK_PAGE_SIZE)
         {
-            if (RAM_Read(otaFileHandlerData.handle, ptrBuffer, OTA_CONTROL_BLOCK_PAGE_SIZE, appMetaDataAddress) != true)
+            if (_Read(otaFileHandlerData.handle, ptrBuffer, OTA_CONTROL_BLOCK_PAGE_SIZE, appMetaDataAddress) != true)
             {
                 status = false;
                 break;
@@ -206,7 +206,7 @@ bool OTA_SERVICE_FH_CtrlBlkWrite(OTA_CONTROL_BLOCK *controlBlock, uint32_t lengt
 
         for (count = 0U; count < length; count += OTA_CONTROL_BLOCK_PAGE_SIZE)
         {
-            if (RAM_PageWrite(otaFileHandlerData.handle, ptrBuffer, appMetaDataAddress) != true)
+            if (_PageWrite(otaFileHandlerData.handle, ptrBuffer, appMetaDataAddress) != true)
             {
                 status = false;
                 break;
@@ -238,13 +238,13 @@ void OTA_SERVICE_FH_Tasks(void)
             otaFileHandlerData.totalBytesWritten = 0U;
             otaFileHandlerData.controlBlock->ActiveImageNum = 0U;
             otaFileHandlerCtx.fileHeader = &otaFileHandlerData.fileHeader;
-            if (RAM_Status(RAM_INDEX) == SYS_STATUS_READY)
+            if (_Status(_INDEX) == SYS_STATUS_READY)
             {
-                otaFileHandlerData.handle = RAM_Open(RAM_INDEX, DRV_IO_INTENT_READWRITE);
+                otaFileHandlerData.handle = _Open(_INDEX, DRV_IO_INTENT_READWRITE);
 
                 if (otaFileHandlerData.handle != DRV_HANDLE_INVALID)
                 {
-                    if (RAM_GeometryGet(otaFileHandlerData.handle, (void *)&otaFileHandlerData.geometry) != true)
+                    if (_GeometryGet(otaFileHandlerData.handle, (void *)&otaFileHandlerData.geometry) != true)
                     {
                         otaFileHandlerData.state = OTA_SERVICE_FH_STATE_ERROR;
                         break;
@@ -286,7 +286,7 @@ void OTA_SERVICE_FH_Tasks(void)
 
         case OTA_SERVICE_FH_STATE_WRITE:
         {
-            (void)RAM_PageWrite(otaFileHandlerData.handle, &flash_data[0], otaFileHandlerData.memoryAddress);
+            (void)_PageWrite(otaFileHandlerData.handle, &flash_data[0], otaFileHandlerData.memoryAddress);
             otaFileHandlerData.nFlashBytesWritten = 0U;
             otaFileHandlerData.nFlashBytesFreeSpace = DATA_SIZE;
             otaFileHandlerData.memoryAddress += DATA_SIZE;
@@ -298,7 +298,7 @@ void OTA_SERVICE_FH_Tasks(void)
         case OTA_SERVICE_FH_STATE_WRITE_WAIT:
         {
             OTA_MEM_TRANSFER_STATUS transferStatus;
-            transferStatus = (OTA_MEM_TRANSFER_STATUS)RAM_TransferStatusGet(otaFileHandlerData.handle);
+            transferStatus = (OTA_MEM_TRANSFER_STATUS)_TransferStatusGet(otaFileHandlerData.handle);
             if (transferStatus == OTA_MEM_TRANSFER_COMPLETED)
             {
                 if (otaFileHandlerData.totalBytesWritten >= otaFileHandlerData.fileHeader.imageSize)
@@ -325,7 +325,7 @@ void OTA_SERVICE_FH_Tasks(void)
             while (imageSize < otaFileHandlerData.fileHeader.imageSize)
             {
 
-                (void)RAM_Read(otaFileHandlerData.handle, &flash_data[0], dataSize, otaFileHandlerData.memoryAddress);
+                (void)_Read(otaFileHandlerData.handle, &flash_data[0], dataSize, otaFileHandlerData.memoryAddress);
 
                 (void)OTA_SERVICE_FH_WaitForXferComplete();
 

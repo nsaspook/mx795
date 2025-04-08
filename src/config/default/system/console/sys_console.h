@@ -369,9 +369,7 @@ typedef struct
 // *****************************************************************************
 // *****************************************************************************
 
-extern const SYS_CONSOLE_DEV_DESC sysConsoleUSBCdcDevDesc;
 
-extern const SYS_CONSOLE_DEV_DESC sysConsoleUARTDevDesc;
 
 // *****************************************************************************
 /* Function:

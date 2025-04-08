@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: mx795
-creation_date: 2025-04-07T17:10:44.046-07:00[US/Pacific]
+creation_date: 2025-04-07T19:22:47.418-07:00[America/Los_Angeles]
 operating_system: Linux
 mcc_mode: IDE
 mcc_mode_version: v6.25
@@ -21,10 +21,15 @@ modules:
 - {name: cryptoauthlib, type: HARMONY, version: '20250213'}
 - {name: csp, type: HARMONY, version: v3.22.2}
 - {name: usb, type: HARMONY, version: v3.16.0}
-- {name: wireless_services, type: HARMONY, version: v1.0.0}
+- {name: FreeRTOS-Kernel, type: HARMONY, version: V11.2.0}
+- {name: wolfssl, type: HARMONY, version: v5.7.0}
+- {name: smartenergy, type: HARMONY, version: v1.3.1}
 - {name: crypto, type: HARMONY, version: v3.8.2}
+- {name: core, type: HARMONY, version: v3.15.1}
+- {name: filex, type: HARMONY, version: v6.4.0_rel}
 - {name: zlib, type: HARMONY, version: v1.3.1}
 - {name: paho.mqtt.embedded-c, type: HARMONY, version: v1.2.3}
+- {name: littlefs, type: HARMONY, version: v2.10.2}
 - {name: wireless_system_pic32mzw1_wfi32e01, type: HARMONY, version: v3.9.1}
 - {name: wolfMQTT, type: HARMONY, version: v1.19.2}
 - {name: net, type: HARMONY, version: v3.13.0}

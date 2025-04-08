@@ -744,7 +744,6 @@ typedef struct TCPIP_STACK_INIT
 #include "tcpip/tcp.h"
 #include "tcpip/udp.h"
 #include "tcpip/berkeley_api.h"
-#include "tcpip/dhcp_server.h"
 #include "tcpip/zero_conf_link_local.h"
 #include "tcpip/zero_conf_multicast_dns.h"
 #include "tcpip/dnss.h"
@@ -763,7 +762,6 @@ typedef struct TCPIP_STACK_INIT
 #include "tcpip/lldp.h"
 #include "tcpip/smtpc.h"
 #include "tcpip/igmp.h"
-#include "tcpip/tftpc.h"
 #include "tcpip/iperf.h"
 #include "tcpip/tcpip_commands.h"
 #endif  // __TCPIP_H__
