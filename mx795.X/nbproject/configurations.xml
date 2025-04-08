@@ -29,6 +29,7 @@
                 <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
                   <itemPath>../src/config/default/driver/ethphy/src/dynamic/drv_extphy_dp83848.h</itemPath>
                   <itemPath>../src/config/default/driver/ethphy/src/dynamic/drv_extphy_regs.h</itemPath>
+                  <itemPath>../src/config/default/driver/ethphy/src/dynamic/drv_extphy_dp83640.h</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/default/driver/ethphy/src/drv_ethphy_local.h</itemPath>
               </logicalFolder>
@@ -180,6 +181,144 @@
             <itemPath>../src/config/default/driver/driver.h</itemPath>
           </logicalFolder>
           <logicalFolder name="library" displayName="library" projectFiles="true">
+            <logicalFolder name="cryptoauthlib"
+                           displayName="cryptoauthlib"
+                           projectFiles="true">
+              <logicalFolder name="atcacert" displayName="atcacert" projectFiles="true">
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_pem.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_der.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_date.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_def.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_host_sw.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_host_hw.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_check_config.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_client.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="crypto" displayName="crypto" projectFiles="true">
+                <logicalFolder name="hashes" displayName="hashes" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/crypto/hashes/sha2_routines.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/crypto/hashes/sha1_routines.h</itemPath>
+                </logicalFolder>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/crypto_sw_config_check.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_sw_sha2.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_sw.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_sw_sha1.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_hw_aes.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/crypto_hw_config_check.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="hal" displayName="hal" projectFiles="true">
+                <itemPath>../src/config/default/library/cryptoauthlib/hal/kit_protocol.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/hal/atca_hal.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="jwt" displayName="jwt" projectFiles="true">
+                <itemPath>../src/config/default/library/cryptoauthlib/jwt/atca_jwt.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="kit_host" displayName="kit_host" projectFiles="true">
+                <itemPath>../src/config/default/library/cryptoauthlib/kit_host/ascii_kit_host.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="pkcs11" displayName="pkcs11" projectFiles="true">
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_signature.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_attrib.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_key.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_debug.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_init.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_info.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/cryptoki.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_token.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_slot.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_encrypt.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_object.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11f.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_cert.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_util.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_os.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_config.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_session.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_find.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11t.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_mech.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_digest.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="test" displayName="test" projectFiles="true">
+                <logicalFolder name="api_atcab" displayName="api_atcab" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/test_atcab.h</itemPath>
+                </logicalFolder>
+                <logicalFolder name="api_calib" displayName="api_calib" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_calib/test_calib.h</itemPath>
+                </logicalFolder>
+                <logicalFolder name="api_crypto" displayName="api_crypto" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_crypto/test_crypto.h</itemPath>
+                </logicalFolder>
+                <logicalFolder name="atcacert" displayName="atcacert" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_5_device.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_16_signer.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_12_device.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_13_signer.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_1_signer.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_10_device.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_15_device_csr.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_11_signer.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_9_device.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_2_device_csr.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_7_signer.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_4_device.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_14_device.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_6_device.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_3_device.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_atcacert.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_0_device.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_8_signer.h</itemPath>
+                </logicalFolder>
+                <logicalFolder name="hal" displayName="hal" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/hal/test_hal.h</itemPath>
+                </logicalFolder>
+                <logicalFolder name="integration" displayName="integration" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/integration/test_integration.h</itemPath>
+                </logicalFolder>
+                <logicalFolder name="jwt" displayName="jwt" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/jwt/test_jwt.h</itemPath>
+                </logicalFolder>
+                <logicalFolder name="vectors" displayName="vectors" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/aes_cmac_nist_vectors.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/pkcs7_pad_vectors.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/vector_utils.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/vectors_config_check.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/ecdsa_nist_vectors.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/aes_gcm_nist_vectors.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/pbkdf2_sha256_vectors.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/ecdh_nist_vectors.h</itemPath>
+                </logicalFolder>
+                <itemPath>../src/config/default/library/cryptoauthlib/test/cmd-processor.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/test/atca_test.h</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/test/cbuf.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="third_party" displayName="third_party" projectFiles="true">
+                <logicalFolder name="unity" displayName="unity" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/third_party/unity/unity_fixture_internals.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/third_party/unity/unity.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/third_party/unity/unity_memory.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/third_party/unity/unity_internals.h</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/third_party/unity/unity_fixture.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_version.h</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_cfgs.h</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_config_check.h</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_helpers.h</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_status.h</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_compiler.h</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_platform.h</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_iface.h</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_devtypes.h</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/cryptoauthlib.h</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_basic.h</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_device.h</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/cal_internal.h</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/cal_buffer.h</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_debug.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="tcpip" displayName="tcpip" projectFiles="true">
               <logicalFolder name="src" displayName="src" projectFiles="true">
                 <logicalFolder name="common" displayName="common" projectFiles="true">
@@ -328,6 +467,13 @@
             <itemPath>../src/config/default/osal/osal.h</itemPath>
             <itemPath>../src/config/default/osal/osal_definitions.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="ota_service" displayName="ota_service" projectFiles="true">
+            <itemPath>../src/config/default/ota_service/ota_config.h</itemPath>
+            <itemPath>../src/config/default/ota_service/ota_service.h</itemPath>
+            <itemPath>../src/config/default/ota_service/ota_service_transport_ble.h</itemPath>
+            <itemPath>../src/config/default/ota_service/ota_service_control_block.h</itemPath>
+            <itemPath>../src/config/default/ota_service/ota_service_file_handler.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="adc" displayName="adc" projectFiles="true">
               <itemPath>../src/config/default/peripheral/adc/plib_adc.h</itemPath>
@@ -343,6 +489,9 @@
             </logicalFolder>
             <logicalFolder name="gpio" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/default/peripheral/gpio/plib_gpio.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="nvm" displayName="nvm" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/nvm/plib_nvm.h</itemPath>
             </logicalFolder>
             <logicalFolder name="ram" displayName="ram" projectFiles="true">
               <itemPath>../src/config/default/peripheral/ram/plib_ram.h</itemPath>
@@ -403,6 +552,15 @@
             <itemPath>../src/config/default/system/sys_time_h2_adapter.h</itemPath>
             <itemPath>../src/config/default/system/system_media.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="third_party_adapter"
+                         displayName="third_party_adapter"
+                         projectFiles="true">
+            <logicalFolder name="wolfMQTT" displayName="wolfMQTT" projectFiles="true">
+              <logicalFolder name="src" displayName="src" projectFiles="true">
+                <itemPath>../src/config/default/third_party_adapter/wolfMQTT/src/mqtt_net_glue.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
           <logicalFolder name="usb" displayName="usb" projectFiles="true">
             <logicalFolder name="src" displayName="src" projectFiles="true">
               <itemPath>../src/config/default/usb/src/usb_device_function_driver.h</itemPath>
@@ -410,6 +568,11 @@
               <itemPath>../src/config/default/usb/src/usb_device_mapping.h</itemPath>
               <itemPath>../src/config/default/usb/src/usb_external_dependencies.h</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device_cdc_local.h</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_host_local.h</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_host_generic_local.h</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_host_cdc_local.h</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_host_hub_mapping.h</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_host_hid_local.h</itemPath>
             </logicalFolder>
             <itemPath>../src/config/default/usb/usb_host.h</itemPath>
             <itemPath>../src/config/default/usb/usb_hub.h</itemPath>
@@ -420,6 +583,10 @@
             <itemPath>../src/config/default/usb/usb_host_hub_interface.h</itemPath>
             <itemPath>../src/config/default/usb/usb_device.h</itemPath>
             <itemPath>../src/config/default/usb/usb_cdc.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_host_cdc.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_host_hid.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_hid.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_host_generic.h</itemPath>
           </logicalFolder>
           <itemPath>../src/config/default/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/default/device.h</itemPath>
@@ -432,6 +599,7 @@
           <itemPath>../src/config/default/config.h</itemPath>
           <itemPath>../src/config/default/sys_tasks.h</itemPath>
           <itemPath>../src/config/default/configuration.h</itemPath>
+          <itemPath>../src/config/default/user_settings.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="paho.mqtt.embedded-c"
@@ -462,6 +630,19 @@
       <logicalFolder name="system" displayName="system" projectFiles="true">
         <logicalFolder name="tmr" displayName="tmr" projectFiles="true">
           <itemPath>../src/config/default/system/tmr/sys_tmr.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="third_party" displayName="third_party" projectFiles="true">
+        <logicalFolder name="wolfMQTT" displayName="wolfMQTT" projectFiles="true">
+          <logicalFolder name="wolfmqtt" displayName="wolfmqtt" projectFiles="true">
+            <itemPath>../src/third_party/wolfMQTT/wolfmqtt/vs_settings.h</itemPath>
+            <itemPath>../src/third_party/wolfMQTT/wolfmqtt/mqtt_types.h</itemPath>
+            <itemPath>../src/third_party/wolfMQTT/wolfmqtt/mqtt_socket.h</itemPath>
+            <itemPath>../src/third_party/wolfMQTT/wolfmqtt/mqtt_packet.h</itemPath>
+            <itemPath>../src/third_party/wolfMQTT/wolfmqtt/visibility.h</itemPath>
+            <itemPath>../src/third_party/wolfMQTT/wolfmqtt/version.h</itemPath>
+            <itemPath>../src/third_party/wolfMQTT/wolfmqtt/mqtt_client.h</itemPath>
+          </logicalFolder>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="wolfcrypt" displayName="wolfcrypt" projectFiles="true">
@@ -648,6 +829,8 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
       <itemPath>../src/http_server_print.h</itemPath>
+      <itemPath>../src/mib.h</itemPath>
+      <itemPath>../src/app_mqtt_task.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -690,6 +873,7 @@
                 <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
                   <itemPath>../src/config/default/driver/ethphy/src/dynamic/drv_ethphy.c</itemPath>
                   <itemPath>../src/config/default/driver/ethphy/src/dynamic/drv_extphy_dp83848.c</itemPath>
+                  <itemPath>../src/config/default/driver/ethphy/src/dynamic/drv_extphy_dp83640.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
@@ -716,10 +900,199 @@
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="library" displayName="library" projectFiles="true">
+            <logicalFolder name="cryptoauthlib"
+                           displayName="cryptoauthlib"
+                           projectFiles="true">
+              <logicalFolder name="app" displayName="app" projectFiles="true">
+                <logicalFolder name="pkcs11" displayName="pkcs11" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/app/pkcs11/trust_pkcs11_config.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="atcacert" displayName="atcacert" projectFiles="true">
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_pem.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_der.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_date.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_def.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_host_sw.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_host_hw.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/atcacert/atcacert_client.c</itemPath>
+              </logicalFolder>
+              <logicalFolder name="crypto" displayName="crypto" projectFiles="true">
+                <logicalFolder name="hashes" displayName="hashes" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/crypto/hashes/sha2_routines.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/crypto/hashes/sha1_routines.c</itemPath>
+                </logicalFolder>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_hw_aes_ccm.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_hw_aes_cbcmac.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_sw_sha2.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_pad.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_sw_aes_cmac.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_hw_aes_cmac.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_pbkdf2.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_sw_aes_gcm.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_hw_aes_ctr.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_sw_sha1.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/crypto/atca_crypto_hw_aes_cbc.c</itemPath>
+              </logicalFolder>
+              <logicalFolder name="hal" displayName="hal" projectFiles="true">
+                <itemPath>../src/config/default/library/cryptoauthlib/hal/hal_gpio_harmony.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/hal/hal_pic32_delay.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/hal/kit_protocol.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/hal/atca_hal.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/hal/hal_uart_harmony.c</itemPath>
+              </logicalFolder>
+              <logicalFolder name="jwt" displayName="jwt" projectFiles="true">
+                <itemPath>../src/config/default/library/cryptoauthlib/jwt/atca_jwt.c</itemPath>
+              </logicalFolder>
+              <logicalFolder name="kit_host" displayName="kit_host" projectFiles="true">
+                <itemPath>../src/config/default/library/cryptoauthlib/kit_host/ascii_kit_host.c</itemPath>
+              </logicalFolder>
+              <logicalFolder name="pkcs11" displayName="pkcs11" projectFiles="true">
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_signature.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_attrib.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_config.h.in</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_key.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_debug.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_info.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_init.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_token.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_slot.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_main.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_encrypt.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_object.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_cert.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_util.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_os.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_config.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_session.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_find.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_mech.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/pkcs11/pkcs11_digest.c</itemPath>
+              </logicalFolder>
+              <logicalFolder name="test" displayName="test" projectFiles="true">
+                <logicalFolder name="api_atcab" displayName="api_atcab" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_updateextra.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_secureboot.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_hmac.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/test_atcab.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_ecdh.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_aes_cbcmac.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_info.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_sha.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_sign.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_privwrite.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_aes_ccm.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_read.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_aes_cmac.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_aes.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_write.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_random.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_lock.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_aes_cbc.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_aes_gcm.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_helper.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_kdf.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_mac.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_verify.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_aes_ctr.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_startup.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_derivekey.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_counter.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_nonce.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_genkey.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_buffer.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_gendig.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_otpzero.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_atcab/atca_tests_selftest.c</itemPath>
+                </logicalFolder>
+                <logicalFolder name="api_calib" displayName="api_calib" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_calib/test_calib.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_calib/test_calib_config.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_calib/test_calib_info.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_calib/test_calib_delete.c</itemPath>
+                </logicalFolder>
+                <logicalFolder name="api_crypto" displayName="api_crypto" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_crypto/test_crypto.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_crypto/test_crypto_pk.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_crypto/test_crypto_sha.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_crypto/test_crypto_aes.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_crypto/test_crypto_pbkdf2.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/api_crypto/test_crypto_pad.c</itemPath>
+                </logicalFolder>
+                <logicalFolder name="atcacert" displayName="atcacert" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_5_device.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_16_signer.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_12_device.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_atcacert_client.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_atcacert_date.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_atcacert_der_integer.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_10_device.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_13_signer.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_1_signer.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_15_device_csr.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_11_signer.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_9_device.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_2_device_csr.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_atcacert_der_ecdsa_sig_value.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_atcacert_host_sw.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_7_signer.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_atcacert_host_hw.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_4_device.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_14_device.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_atcacert_def.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_6_device.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_3_device.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_atcacert.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_0_device.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_cert_def_8_signer.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/atcacert/test_atcacert_der_length.c</itemPath>
+                </logicalFolder>
+                <logicalFolder name="hal" displayName="hal" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/hal/test_hal_basic.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/hal/test_hal.c</itemPath>
+                </logicalFolder>
+                <logicalFolder name="integration" displayName="integration" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/integration/test_integration.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/integration/test_mbedtls.c</itemPath>
+                </logicalFolder>
+                <logicalFolder name="jwt" displayName="jwt" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/jwt/atca_jwt_test.c</itemPath>
+                </logicalFolder>
+                <logicalFolder name="vectors" displayName="vectors" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/aes_cmac_nist_vectors.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/pkcs7_pad_vectors.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/vector_utils.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/ecdsa_nist_vectors.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/aes_gcm_nist_vectors.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/pbkdf2_sha256_vectors.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/test/vectors/ecdh_nist_vectors.c</itemPath>
+                </logicalFolder>
+                <itemPath>../src/config/default/library/cryptoauthlib/test/atca_test_console.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/test/cmd-processor.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/test/atca_test.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/test/atca_test_config.c</itemPath>
+                <itemPath>../src/config/default/library/cryptoauthlib/test/atca_utils_atecc608.c</itemPath>
+              </logicalFolder>
+              <logicalFolder name="third_party" displayName="third_party" projectFiles="true">
+                <logicalFolder name="unity" displayName="unity" projectFiles="true">
+                  <itemPath>../src/config/default/library/cryptoauthlib/third_party/unity/unity.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/third_party/unity/unity_memory.c</itemPath>
+                  <itemPath>../src/config/default/library/cryptoauthlib/third_party/unity/unity_fixture.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_cfgs.c</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_helpers.c</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_iface.c</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_basic.c</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_device.c</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/cal_buffer.c</itemPath>
+              <itemPath>../src/config/default/library/cryptoauthlib/atca_debug.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="tcpip" displayName="tcpip" projectFiles="true">
               <logicalFolder name="src" displayName="src" projectFiles="true">
                 <logicalFolder name="common" displayName="common" projectFiles="true">
                   <itemPath>../src/config/default/library/tcpip/src/helpers.c</itemPath>
+                  <itemPath>../src/config/default/library/tcpip/src/common/sys_fs_shell.c</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/default/library/tcpip/src/tcpip_heap_internal.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/tcpip_notify.c</itemPath>
@@ -743,6 +1116,27 @@
                 <itemPath>../src/config/default/library/tcpip/src/http_server.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/berkeley_api.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/dhcp_server.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/icmpv6.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/tftpc.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/http.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/sntp.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/zero_conf_helper.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/ipv6.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/smtpc.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/dnss.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/dhcpv6.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/igmp.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/ftpc.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/zero_conf_multicast_dns.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/zero_conf_link_local.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/ndp.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/iperf.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/nbns.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/snmpv3.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/ftp.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/snmpv3_usm.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/ddns.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/snmp.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -757,6 +1151,11 @@
           </logicalFolder>
           <logicalFolder name="osal" displayName="osal" projectFiles="true">
             <itemPath>../src/config/default/osal/osal_freertos.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="ota_service" displayName="ota_service" projectFiles="true">
+            <itemPath>../src/config/default/ota_service/ota_service.c</itemPath>
+            <itemPath>../src/config/default/ota_service/ota_service_file_handler.c</itemPath>
+            <itemPath>../src/config/default/ota_service/ota_service_transport_ble.c</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="adc" displayName="adc" projectFiles="true">
@@ -773,6 +1172,9 @@
             </logicalFolder>
             <logicalFolder name="gpio" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/default/peripheral/gpio/plib_gpio.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="nvm" displayName="nvm" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/nvm/plib_nvm.c</itemPath>
             </logicalFolder>
             <logicalFolder name="ram" displayName="ram" projectFiles="true">
               <itemPath>../src/config/default/peripheral/ram/plib_ram.c</itemPath>
@@ -821,11 +1223,25 @@
             <itemPath>../src/config/default/system/sys_time_h2_adapter.c</itemPath>
             <itemPath>../src/config/default/system/sys_random_h2_adapter.c</itemPath>
           </logicalFolder>
+          <logicalFolder name="third_party_adapter"
+                         displayName="third_party_adapter"
+                         projectFiles="true">
+            <logicalFolder name="wolfMQTT" displayName="wolfMQTT" projectFiles="true">
+              <logicalFolder name="src" displayName="src" projectFiles="true">
+                <itemPath>../src/config/default/third_party_adapter/wolfMQTT/src/mqtt_net_glue.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
           <logicalFolder name="usb" displayName="usb" projectFiles="true">
             <logicalFolder name="src" displayName="src" projectFiles="true">
               <itemPath>../src/config/default/usb/src/usb_device_cdc.c</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device_cdc_acm.c</itemPath>
               <itemPath>../src/config/default/usb/src/usb_device.c</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_host_generic.c</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_host_cdc.c</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_host_cdc_acm.c</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_host.c</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_host_hid.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <itemPath>../src/config/default/exceptions.c</itemPath>
@@ -865,46 +1281,127 @@
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="third_party" displayName="third_party" projectFiles="true">
+        <logicalFolder name="wolfMQTT" displayName="wolfMQTT" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>../src/third_party/wolfMQTT/src/mqtt_packet.c</itemPath>
+            <itemPath>../src/third_party/wolfMQTT/src/mqtt_socket.c</itemPath>
+            <itemPath>../src/third_party/wolfMQTT/src/mqtt_client.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
       <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
-        <logicalFolder name="dyndns" displayName="dyndns" projectFiles="true">
-          <logicalFolder name="dyndns" displayName="dyndns" projectFiles="true">
-            <itemPath>../src/web_pages/dyndns/index.htm</itemPath>
+        <logicalFolder name="root" displayName="root" projectFiles="true">
+          <logicalFolder name=".mcc" displayName=".mcc" projectFiles="true">
+            <logicalFolder name="HarmonyContent"
+                           displayName="HarmonyContent"
+                           projectFiles="true">
+              <logicalFolder name="net" displayName="net" projectFiles="true">
+                <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
+                  <logicalFolder name="dyndns" displayName="dyndns" projectFiles="true">
+                    <logicalFolder name="root" displayName="root" projectFiles="true">
+                      <logicalFolder name=".mcc" displayName=".mcc" projectFiles="true">
+                        <logicalFolder name="HarmonyContent"
+                                       displayName="HarmonyContent"
+                                       projectFiles="true">
+                          <logicalFolder name="net" displayName="net" projectFiles="true">
+                            <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
+                              <logicalFolder name="dyndns" displayName="dyndns" projectFiles="true">
+                                <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/dyndns/index.htm</itemPath>
+                              </logicalFolder>
+                            </logicalFolder>
+                          </logicalFolder>
+                        </logicalFolder>
+                      </logicalFolder>
+                    </logicalFolder>
+                  </logicalFolder>
+                  <logicalFolder name="email" displayName="email" projectFiles="true">
+                    <logicalFolder name="root" displayName="root" projectFiles="true">
+                      <logicalFolder name=".mcc" displayName=".mcc" projectFiles="true">
+                        <logicalFolder name="HarmonyContent"
+                                       displayName="HarmonyContent"
+                                       projectFiles="true">
+                          <logicalFolder name="net" displayName="net" projectFiles="true">
+                            <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
+                              <logicalFolder name="email" displayName="email" projectFiles="true">
+                                <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/email/index.htm</itemPath>
+                              </logicalFolder>
+                            </logicalFolder>
+                          </logicalFolder>
+                        </logicalFolder>
+                      </logicalFolder>
+                    </logicalFolder>
+                  </logicalFolder>
+                  <logicalFolder name="protect" displayName="protect" projectFiles="true">
+                    <logicalFolder name="root" displayName="root" projectFiles="true">
+                      <logicalFolder name=".mcc" displayName=".mcc" projectFiles="true">
+                        <logicalFolder name="HarmonyContent"
+                                       displayName="HarmonyContent"
+                                       projectFiles="true">
+                          <logicalFolder name="net" displayName="net" projectFiles="true">
+                            <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
+                              <logicalFolder name="protect" displayName="protect" projectFiles="true">
+                                <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/protect/reboot.htm</itemPath>
+                                <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/protect/config.htm</itemPath>
+                                <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/protect/reboot.cgi</itemPath>
+                                <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/protect/index.htm</itemPath>
+                              </logicalFolder>
+                            </logicalFolder>
+                          </logicalFolder>
+                        </logicalFolder>
+                      </logicalFolder>
+                    </logicalFolder>
+                  </logicalFolder>
+                  <logicalFolder name="root" displayName="root" projectFiles="true">
+                    <logicalFolder name=".mcc" displayName=".mcc" projectFiles="true">
+                      <logicalFolder name="HarmonyContent"
+                                     displayName="HarmonyContent"
+                                     projectFiles="true">
+                        <logicalFolder name="net" displayName="net" projectFiles="true">
+                          <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/harmony.gif</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/cookies.htm</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/header.htm</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/forms.htm</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/dynvars.htm</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/upload.htm</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/mchp.js</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/leds.cgi</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/mchp.css</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/ssi.htm</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/footer.htm</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/status.xml</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/snmp.bib</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/mchp.gif</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/index.htm</itemPath>
+                            <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/auth.htm</itemPath>
+                          </logicalFolder>
+                        </logicalFolder>
+                      </logicalFolder>
+                    </logicalFolder>
+                  </logicalFolder>
+                  <logicalFolder name="snmp" displayName="snmp" projectFiles="true">
+                    <logicalFolder name="root" displayName="root" projectFiles="true">
+                      <logicalFolder name=".mcc" displayName=".mcc" projectFiles="true">
+                        <logicalFolder name="HarmonyContent"
+                                       displayName="HarmonyContent"
+                                       projectFiles="true">
+                          <logicalFolder name="net" displayName="net" projectFiles="true">
+                            <logicalFolder name="web_pages" displayName="web_pages" projectFiles="true">
+                              <logicalFolder name="snmp" displayName="snmp" projectFiles="true">
+                                <itemPath>../src/web_pages/root/.mcc/HarmonyContent/net/web_pages/snmp/snmpconfig.htm</itemPath>
+                              </logicalFolder>
+                            </logicalFolder>
+                          </logicalFolder>
+                        </logicalFolder>
+                      </logicalFolder>
+                    </logicalFolder>
+                  </logicalFolder>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder name="email" displayName="email" projectFiles="true">
-          <logicalFolder name="email" displayName="email" projectFiles="true">
-            <itemPath>../src/web_pages/email/index.htm</itemPath>
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="protect" displayName="protect" projectFiles="true">
-          <logicalFolder name="protect" displayName="protect" projectFiles="true">
-            <itemPath>../src/web_pages/protect/reboot.htm</itemPath>
-            <itemPath>../src/web_pages/protect/index.htm</itemPath>
-            <itemPath>../src/web_pages/protect/reboot.cgi</itemPath>
-            <itemPath>../src/web_pages/protect/config.htm</itemPath>
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="snmp" displayName="snmp" projectFiles="true">
-          <logicalFolder name="snmp" displayName="snmp" projectFiles="true">
-            <itemPath>../src/web_pages/snmp/snmpconfig.htm</itemPath>
-          </logicalFolder>
-        </logicalFolder>
-        <itemPath>../src/web_pages/leds.cgi</itemPath>
-        <itemPath>../src/web_pages/mchp.js</itemPath>
-        <itemPath>../src/web_pages/auth.htm</itemPath>
-        <itemPath>../src/web_pages/snmp.bib</itemPath>
-        <itemPath>../src/web_pages/forms.htm</itemPath>
-        <itemPath>../src/web_pages/status.xml</itemPath>
-        <itemPath>../src/web_pages/harmony.gif</itemPath>
-        <itemPath>../src/web_pages/mchp.css</itemPath>
-        <itemPath>../src/web_pages/footer.htm</itemPath>
-        <itemPath>../src/web_pages/cookies.htm</itemPath>
-        <itemPath>../src/web_pages/upload.htm</itemPath>
-        <itemPath>../src/web_pages/dynvars.htm</itemPath>
-        <itemPath>../src/web_pages/ssi.htm</itemPath>
-        <itemPath>../src/web_pages/mchp.gif</itemPath>
-        <itemPath>../src/web_pages/index.htm</itemPath>
-        <itemPath>../src/web_pages/header.htm</itemPath>
       </logicalFolder>
       <logicalFolder name="wolfcrypt" displayName="wolfcrypt" projectFiles="true">
         <logicalFolder name="port" displayName="port" projectFiles="true">
@@ -1068,6 +1565,10 @@
       <itemPath>../src/app.c</itemPath>
       <itemPath>../src/http_server_print.c</itemPath>
       <itemPath>../src/custom_http_server_app.c</itemPath>
+      <itemPath>../src/custom_snmp_app.c</itemPath>
+      <itemPath>../src/app_mqtt_task.c</itemPath>
+      <itemPath>../src/custom_http_app.c</itemPath>
+      <itemPath>../src/http_print.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -1083,8 +1584,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>SKDEPIC32PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
-        <platform>3</platform>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
+        <platform>2</platform>
       </toolsSet>
       <packs>
         <pack name="PIC32MX_DFP" vendor="Microchip" version="1.6.369"/>
@@ -1134,7 +1635,7 @@
         <property key="exclude-floating-point" value="false"/>
         <property key="expand-pragma-config" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/default;../src/config/default/library;../src/config/default/library/tcpip/src;../src/config/default/library/tcpip/src/common;../src/config/default/system/fs/fat_fs/file_system;../src/config/default/system/fs/fat_fs/hardware_access;../src/third_party/paho.mqtt.embedded-c;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MX;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl;../src/third_party/zlib"/>
+                  value="../src;../src/config/default;../src/config/default/library;../src/config/default/library/cryptoauthlib;../src/config/default/library/cryptoauthlib/crypto;../src/config/default/library/cryptoauthlib/pkcs11;../src/config/default/library/cryptoauthlib/test;../src/config/default/library/tcpip/src;../src/config/default/library/tcpip/src/common;../src/config/default/system/fs/fat_fs/file_system;../src/config/default/system/fs/fat_fs/hardware_access;../src/config/default/third_party_adapter/wolfMQTT/src/;../src/third_party/paho.mqtt.embedded-c;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MX;../src/third_party/wolfMQTT;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl;../src/third_party/zlib"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -1221,7 +1722,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value="1024"/>
+        <property key="heap-size" value="102400"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>

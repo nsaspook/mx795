@@ -50,22 +50,16 @@
 #define CORE_TIMER_FREQUENCY    (40000000U)
 
 
-typedef void (*CORETIMER_CALLBACK)(uint32_t status, uintptr_t context);
 
-typedef struct
-{
-    CORETIMER_CALLBACK  callback;
-    uintptr_t           context;
-} CORETIMER_OBJECT ;
+#define CORE_TIMER_COMPARE_VALUE    0x9c40
 
 void CORETIMER_Initialize(void);
-void CORETIMER_CallbackSet ( CORETIMER_CALLBACK callback, uintptr_t context );
-uint32_t CORETIMER_FrequencyGet (void);
 void CORETIMER_Start(void);
 void CORETIMER_Stop(void);
-uint32_t CORETIMER_CounterGet(void);
-void CORETIMER_CompareSet(uint32_t compare);
-
+uint32_t CORETIMER_FrequencyGet (void);
+void CORETIMER_CompareSet ( uint32_t compare);
+uint32_t CORETIMER_CounterGet (void);
+bool CORETIMER_CompareHasExpired(void);
 
 
 void CORETIMER_DelayMs (uint32_t delay_ms);
